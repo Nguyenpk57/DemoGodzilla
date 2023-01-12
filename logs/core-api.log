@@ -1,0 +1,132 @@
+2023-01-12 17:08:20.886 INFO 55 [main] com.ntt.godzilla.GodzillaApplication: Starting GodzillaApplication using Java 11.0.17 on WS0621 with PID 16000 (C:\Users\vxbach\Documents\Projects\DemoGodzilla\target\classes started by vxbach in C:\Users\vxbach\Documents\Projects\DemoGodzilla)
+2023-01-12 17:08:20.889 INFO 637 [main] com.ntt.godzilla.GodzillaApplication: The following 1 profile is active: "local"
+2023-01-12 17:08:22.016 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8888 (http)
+2023-01-12 17:08:22.035 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:08:22.036 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-12 17:08:22.040 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-12 17:08:22.140 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-12 17:08:22.141 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1198 ms
+2023-01-12 17:08:22.571 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-12 17:08:22.571 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-12 17:08:22.571 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-12 17:08:22.581 INFO 110 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-12 17:08:22.759 INFO 123 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-12 17:08:22.799 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/db_hrm (MySQL 8.0)
+2023-01-12 17:08:22.844 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 1 migration (execution time 00:00.020s)
+2023-01-12 17:08:22.853 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `db_hrm`: 1.0
+2023-01-12 17:08:22.854 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `db_hrm` is up to date. No migration necessary.
+2023-01-12 17:08:22.911 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:08:22.933 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8888 (http) with context path '/core-api'
+2023-01-12 17:08:22.941 INFO 61 [main] com.ntt.godzilla.GodzillaApplication: Started GodzillaApplication in 2.524 seconds (JVM running for 3.155)
+2023-01-12 17:11:02.233 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-12 17:11:02.243 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-12 17:11:04.435 INFO 55 [main] com.ntt.godzilla.GodzillaApplication: Starting GodzillaApplication using Java 11.0.17 on WS0621 with PID 23204 (C:\Users\vxbach\Documents\Projects\DemoGodzilla\target\classes started by vxbach in C:\Users\vxbach\Documents\Projects\DemoGodzilla)
+2023-01-12 17:11:04.438 INFO 637 [main] com.ntt.godzilla.GodzillaApplication: The following 1 profile is active: "local"
+2023-01-12 17:11:05.469 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8888 (http)
+2023-01-12 17:11:05.479 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:11:05.480 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-12 17:11:05.480 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-12 17:11:05.586 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-12 17:11:05.586 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1106 ms
+2023-01-12 17:11:05.955 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-12 17:11:05.955 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-12 17:11:05.955 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-12 17:11:05.964 INFO 110 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-12 17:11:06.120 INFO 123 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-12 17:11:06.150 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/db_hrm (MySQL 8.0)
+2023-01-12 17:11:06.198 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 1 migration (execution time 00:00.023s)
+2023-01-12 17:11:06.211 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `db_hrm`: 1.0
+2023-01-12 17:11:06.213 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `db_hrm` is up to date. No migration necessary.
+2023-01-12 17:11:06.272 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:11:06.291 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8888 (http) with context path '/core-api'
+2023-01-12 17:11:06.298 INFO 61 [main] com.ntt.godzilla.GodzillaApplication: Started GodzillaApplication in 2.275 seconds (JVM running for 2.799)
+2023-01-12 17:13:54.194 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-12 17:13:54.204 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-12 17:14:16.831 INFO 55 [main] com.ntt.godzilla.GodzillaApplication: Starting GodzillaApplication using Java 11.0.17 on WS0621 with PID 16320 (C:\Users\vxbach\Documents\Projects\DemoGodzilla\target\classes started by vxbach in C:\Users\vxbach\Documents\Projects\DemoGodzilla)
+2023-01-12 17:14:16.835 INFO 637 [main] com.ntt.godzilla.GodzillaApplication: The following 1 profile is active: "local"
+2023-01-12 17:14:17.891 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8888 (http)
+2023-01-12 17:14:17.902 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:14:17.903 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-12 17:14:17.903 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-12 17:14:18.023 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-12 17:14:18.023 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1150 ms
+2023-01-12 17:14:18.416 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-12 17:14:18.416 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-12 17:14:18.416 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-12 17:14:18.426 INFO 110 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-12 17:14:18.601 INFO 123 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-12 17:14:18.634 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/db_hrm (MySQL 8.0)
+2023-01-12 17:14:18.681 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 1 migration (execution time 00:00.023s)
+2023-01-12 17:14:18.691 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `db_hrm`: 1.0
+2023-01-12 17:14:18.695 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `db_hrm` is up to date. No migration necessary.
+2023-01-12 17:14:18.751 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:14:18.769 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8888 (http) with context path '/core-api'
+2023-01-12 17:14:18.777 INFO 61 [main] com.ntt.godzilla.GodzillaApplication: Started GodzillaApplication in 2.43 seconds (JVM running for 2.965)
+2023-01-12 17:22:22.969 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-12 17:22:22.979 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-12 17:22:26.699 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8888 (http)
+2023-01-12 17:22:26.708 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:22:26.708 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-12 17:22:26.708 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-12 17:22:26.813 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-12 17:22:26.813 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1141 ms
+2023-01-12 17:22:27.179 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-12 17:22:27.180 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-12 17:22:27.180 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-12 17:22:27.189 INFO 110 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-12 17:22:27.339 INFO 123 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-12 17:22:27.369 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/db_hrm (MySQL 8.0)
+2023-01-12 17:22:27.404 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 1 migration (execution time 00:00.017s)
+2023-01-12 17:22:27.412 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `db_hrm`: 1.0
+2023-01-12 17:22:27.413 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `db_hrm` is up to date. No migration necessary.
+2023-01-12 17:22:27.473 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:22:27.492 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8888 (http) with context path '/core-api'
+2023-01-12 17:47:35.555 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-12 17:47:35.565 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-12 17:47:39.668 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8888 (http)
+2023-01-12 17:47:39.677 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:47:39.678 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-12 17:47:39.678 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-12 17:47:39.798 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-12 17:47:39.799 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1217 ms
+2023-01-12 17:47:40.195 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-12 17:47:40.196 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-12 17:47:40.197 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-12 17:47:40.205 INFO 110 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-12 17:47:40.377 INFO 123 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-12 17:47:40.422 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/db_hrm (MySQL 8.0)
+2023-01-12 17:47:40.477 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 1 migration (execution time 00:00.021s)
+2023-01-12 17:47:40.490 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `db_hrm`: 1.0
+2023-01-12 17:47:40.491 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `db_hrm` is up to date. No migration necessary.
+2023-01-12 17:47:40.547 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:47:40.568 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8888 (http) with context path '/core-api'
+2023-01-12 17:48:20.404 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-12 17:48:20.414 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-12 17:48:26.692 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-12 17:48:26.710 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2023-01-12 17:48:27.406 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8888 (http)
+2023-01-12 17:48:27.415 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:48:27.416 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-12 17:48:27.416 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-12 17:48:27.532 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-12 17:48:27.533 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1323 ms
+2023-01-12 17:48:27.689 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-12 17:48:27.690 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-12 17:48:27.690 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-12 17:48:27.701 INFO 110 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-12 17:48:27.843 INFO 123 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-12 17:48:27.871 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/db_hrm (MySQL 8.0)
+2023-01-12 17:48:27.918 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 2 migrations (execution time 00:00.027s)
+2023-01-12 17:48:27.927 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `db_hrm`: 1.0
+2023-01-12 17:48:27.943 INFO 37 [main] o.f.core.internal.command.DbMigrate: Migrating schema `db_hrm` to version "2.0 - CreateTestQuery"
+2023-01-12 17:48:27.978 WARN 41 [main] o.f.c.i.s.DefaultSqlScriptExecutor: DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2023-01-12 17:48:28.027 INFO 37 [main] o.f.core.internal.command.DbMigrate: Successfully applied 1 migration to schema `db_hrm`, now at version v2.0 (execution time 00:00.104s)
+2023-01-12 17:48:28.154 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-12 17:48:28.212 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-12 17:48:28.378 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-12 17:48:28.511 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-12 17:48:28.714 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-12 17:48:28.725 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-12 17:48:28.759 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-12 17:48:29.037 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8888"]
+2023-01-12 17:48:29.056 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8888 (http) with context path '/core-api'

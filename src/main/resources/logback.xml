@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="log_path" value="./logs" />
+    <property name="name_handle" value="core-api" />
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender" additivity="false">
+        <encoder>
+            <pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="file_processing" class="ch.qos.logback.core.rolling.RollingFileAppender" additivity="false">
+        <file>${log_path}/${name_handle}.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${log_path}/${name_handle}.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <maxHistory>300</maxHistory>
+            <maxFileSize>2MB</maxFileSize>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%date{yyyy-MM-dd} %d{HH:mm:ss.SSS} %level %line [%thread] %logger{36}: %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="error_collecting" class="ch.qos.logback.core.rolling.RollingFileAppender" additivity="false">
+        <file>${log_path}/${name_handle}-error.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${log_path}/${name_handle}_error.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <maxHistory>300</maxHistory>
+            <maxFileSize>2MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd} %d{HH:mm:ss.SSS} %level %line [%thread] %logger{36}: %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="com.ntt.godzilla" level="debug" additivity="false">
+        <appender-ref ref="console" />
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="console" />
+        <appender-ref ref="error_collecting" />
+        <appender-ref ref="file_processing"/>
+    </root>
+</configuration>
