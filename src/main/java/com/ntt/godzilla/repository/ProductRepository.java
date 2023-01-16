@@ -7,4 +7,5 @@ import java.util.List;
 public interface ProductRepository {
     void insertProduct(Product product);
     List<Product> findAllProducts();
+    Long countAllProducts();
 }

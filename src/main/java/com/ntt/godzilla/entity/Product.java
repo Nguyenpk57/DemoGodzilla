@@ -1,22 +1,21 @@
 package com.ntt.godzilla.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 
 @Entity
-@Table(name = "product")
+@Table(name = "dbo_product")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product {
+@Builder
+public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,20 +32,20 @@ public class Product {
     private String description;
 
     @Column(name = "price")
-    private BigDecimal price;
+    private Double price;
 
     @Column(name = "discount")
     private Integer discount;
 
-    @Column(name = "create_user")
-    private String createUser;
+    @Column(name = "created_by")
+    private String createdUser;
 
-    @Column(name = "create_time")
-    private Date createTime;
+    @Column(name = "create_date")
+    private Date createdTime;
 
-    @Column(name = "update_user")
-    private String updateUser;
+    @Column(name = "updated_by")
+    private String updatedUser;
 
-    @Column(name = "update_time")
-    private Date updateTime;
+    @Column(name = "updated_date")
+    private Date updatedTime;
 }

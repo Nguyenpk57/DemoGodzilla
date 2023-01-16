@@ -126,7 +126,13 @@
             <version>3.0</version>
         </dependency>
         <!--END projectlombok-->
-
+<!--        START ModelMapper-->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+<!--            END ModelMapper-->
     </dependencies>
 
 

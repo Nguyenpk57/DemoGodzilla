@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 @Repository
@@ -16,19 +17,25 @@ public class ProductRepositoryImpl implements ProductRepository  {
     @GozTransaction
     @Override
     public void insertProduct(Product product) {
-        entityManager.createNativeQuery("INSERT INTO product (product_name, product_code, description, price, discount,product_id) " +
-                        "                   VALUES (?,?,?,?,?,?)")
+        entityManager.createNativeQuery("INSERT INTO dbo_product (product_name, product_code, description, price, discount) " +
+                        "                   VALUES (?,?,?,?,?)")
                 .setParameter(1, product.getProductName())
                 .setParameter(2, product.getProductCode())
                 .setParameter(3, product.getDescription())
                 .setParameter(4, product.getPrice())
                 .setParameter(5, product.getDiscount())
-                .setParameter(6, product.getProductId())
                 .executeUpdate();
     }
 
     @Override
     public List<Product> findAllProducts() {
-        return entityManager.createQuery("FROM Product").getResultList();
+        return entityManager.createNativeQuery("SELECT * FROM dbo_product").getResultList();
+    }
+
+    @Override
+    public Long countAllProducts() {
+        Query query = entityManager.createNativeQuery("SELECT COUNT(*)  FROM dbo_product");
+        long count = ((Number) query.getSingleResult()).intValue();
+        return count;
     }
 }

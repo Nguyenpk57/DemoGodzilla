@@ -1,50 +1,47 @@
-CREATE TABLE product
+CREATE TABLE dbo_product
 (
-    product_id   INT          NULL,
-    product_code VARCHAR(30)  NULL,
-    product_name VARCHAR(100) NULL,
+    product_id   INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    product_code VARCHAR(30)  NOT NULL,
+    product_name VARCHAR(100) NOT NULL,
     description  VARCHAR(500),
-    price        DECIMAL(15,4),
-    discount     INT(3)       NULL,
-    create_user  VARCHAR(90)  NULL,
-    create_time  DATETIME,
-    update_user  VARCHAR(90),
-    update_time  DATETIME
+    price        DECIMAL(15, 4) DEFAULT 0,
+    discount     INT(3)         DEFAULT 0,
+    created_by   VARCHAR(90)    DEFAULT '1',
+    create_date  DATE           DEFAULT(CURRENT_DATE()),
+    updated_by   VARCHAR(90)    DEFAULT '1',
+    updated_date DATE           DEFAULT(CURRENT_DATE())
 );
 
-CREATE TABLE category
+CREATE TABLE dbo_category
 (
     category_id   INT          NULL,
     category_name VARCHAR(100) NULL,
     description   VARCHAR(500),
-    create_user   VARCHAR(90)  NULL,
-    create_time   DATETIME     NULL,
-    update_user   VARCHAR(90),
-    update_time   DATETIME
+    created_by    VARCHAR(90) DEFAULT '1',
+    create_date   DATE        DEFAULT(CURRENT_DATE()),
+    updated_by    VARCHAR(90) DEFAULT '1',
+    updated_date  DATE        DEFAULT(CURRENT_DATE())
 
 );
 
-CREATE TABLE product_category -- Associative table.
+CREATE TABLE dbo_product_category -- Associative table.
 (
-    product_id  INT NULL,
-    category_id INT NULL,
-    create_user VARCHAR(90),
-    create_time DATETIME,
-    update_user VARCHAR(90),
-    update_time DATETIME
+    product_id   INT NULL,
+    category_id  INT NULL,
+    created_by   VARCHAR(90) DEFAULT '1',
+    create_date  DATE        DEFAULT(CURRENT_DATE()),
+    updated_by   VARCHAR(90) DEFAULT '1',
+    updated_date DATE        DEFAULT(CURRENT_DATE())
 );
 
 
-create table image
+CREATE TABLE dbo_product_image
 (
-    image_id    INT NULL,
-    product_id  INT NULL,
-    image_type  VARCHAR(10),
-    image_size  INT,
-    image_name  VARCHAR(50),
-    image_path  VARCHAR(256),
-    create_user VARCHAR(90),
-    create_time DATETIME,
-    update_user VARCHAR(90),
-    update_time DATETIME
+    image_id     INT NOT NULL,
+    product_id   INT NOT NULL,
+    image_path   VARCHAR(500),
+    created_by   VARCHAR(90) DEFAULT '1',
+    create_date  DATE        DEFAULT(CURRENT_DATE()),
+    updated_by   VARCHAR(90) DEFAULT '1',
+    updated_date DATE        DEFAULT(CURRENT_DATE())
 );
