@@ -1,7 +1,10 @@
 package com.ntt.godzilla.repository;
 
 import com.ntt.godzilla.entity.Product;
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductRepository extends JpaRepository<Product, Long> {
+import java.util.List;
+
+public interface ProductRepository {
+    void insertProduct(Product product);
+    List<Product> findAllProducts();
 }

@@ -4,6 +4,7 @@ import com.ntt.godzilla.entity.Product;
 
 import java.util.List;
 
-public interface IProductService {
+public interface ProductService {
     List<Product> getAllProducts();
+    void createProduct(Product product);
 }

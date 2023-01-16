@@ -2,22 +2,25 @@ package com.ntt.godzilla.service.impl;
 
 import com.ntt.godzilla.entity.Product;
 import com.ntt.godzilla.repository.ProductRepository;
-import com.ntt.godzilla.service.IProductService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.ntt.godzilla.service.ProductService;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class ProductServiceImpl implements IProductService {
-    @Autowired
+public class ProductServiceImpl implements ProductService {
+    @Resource
     private ProductRepository productRepository;
+
 
     @Override
     public List<Product> getAllProducts() {
-        List<Product> products = new ArrayList<Product>();
-        productRepository.findAll().forEach(products::add);
-        return products;
+
+        return productRepository.findAllProducts();
+    }
+
+    @Override
+    public void createProduct(Product product) {
+        productRepository.insertProduct(product);
     }
 }
