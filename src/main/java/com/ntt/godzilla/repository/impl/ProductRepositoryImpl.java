@@ -16,7 +16,8 @@ public class ProductRepositoryImpl implements ProductRepository  {
     @GozTransaction
     @Override
     public void insertProduct(Product product) {
-        entityManager.createNativeQuery("INSERT INTO product (product_name, product_code, description, price, discount,product_id) VALUES (?,?,?,?,?,?)")
+        entityManager.createNativeQuery("INSERT INTO product (product_name, product_code, description, price, discount,product_id) " +
+                        "                   VALUES (?,?,?,?,?,?)")
                 .setParameter(1, product.getProductName())
                 .setParameter(2, product.getProductCode())
                 .setParameter(3, product.getDescription())
