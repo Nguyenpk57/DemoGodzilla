@@ -127,7 +127,44 @@
         </dependency>
         <!--END projectlombok-->
 
+        <!--START keycloak-starter-->
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-boot-starter</artifactId>
+        </dependency>
+        <!--END keycloak-starter-->
+
+        <!--START keycloak-security-adapter-->
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-security-adapter</artifactId>
+            <version>20.0.3</version>
+        </dependency>
+        <!--END keycloak-security-adapter-->
+
+        <!--START spring-sercurity-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!--END spring-sercurity-->
+
     </dependencies>
+
+    <!--START keycloak-adapter-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.keycloak.bom</groupId>
+                <artifactId>keycloak-adapter-bom</artifactId>
+                <version>20.0.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <!--END keycloak-adapter-->
+
 
 
     <build>

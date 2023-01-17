@@ -3,6 +3,7 @@ package com.ntt.godzilla.controller;
 import com.ntt.godzilla.entity.Product;
 import com.ntt.godzilla.factory.ResponseFactory;
 import com.ntt.godzilla.service.IProductService;
+import javax.annotation.security.RolesAllowed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,9 +36,13 @@ public class ProductController extends BaseController {
     private IProductService productService;
 
     @GetMapping("/get")
+    @RolesAllowed("admin")
     public ResponseEntity<?> getAllProducts() {
         try {
             List<Product> products = productService.getAllProducts();
+            System.out.println("=============");
+            System.out.println("=============");
+            System.out.println("=============");
             return responseFactory.success(products);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

@@ -1,7 +1,6 @@
   version: "3.3"
 
   services:
-
     mysql:
       image: mysql:8.0
       container_name: mysql
@@ -21,6 +20,8 @@
     keycloak:
       image: quay.io/keycloak/keycloak:20.0.1
       container_name: keycloak
+      volumes:
+        - ./keycloak/DemoGodZilla-realm.json:/opt/jboss/keycloak/imports/DemoGodZilla-realm.json
       environment:
         - KEYCLOAK_ADMIN=admin
         - KEYCLOAK_ADMIN_PASSWORD=admin
@@ -31,7 +32,9 @@
         - KC_DB_PASSWORD=password
       ports:
         - "9090:8080"
-      command: start-dev
+      command:
+        - "-Dkeycloak.import=/opt/jboss/keycloak/imports/DemoGodZilla-realm.json"
+        - "start-dev"
       depends_on:
         - mysql
       healthcheck:
@@ -44,11 +47,7 @@
       container_name: app
       ports:
         - "8080:8080"
-      command:
-        - ./mvnw clean package -DskipTests
-        - cp target/godzilla.jar src/main/docker
       depends_on:
-        - mysql
         - keycloak
       environment:
         - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/godzilladbdemo
