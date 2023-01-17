@@ -4,10 +4,11 @@ import com.ntt.godzilla.dto.response.ResponseStatusCodeConstant;
 
 public enum ResponseStatusEnum implements IResponseStatus {
 
-    SUCCESS("success", "Success"),
-    GENERAL_ERROR("general_error", "Any error occur"),
-    INVALID_CREDENTIALS("INVALID_CREDENTIALS", "Unauthorized"),
-    INVALID_INPUT("invalid_input", "Input value is invalid"),
+    SUCCESS(ResponseStatusCodeConstant.SUCCESS_CODE, "Success"),
+    GENERAL_ERROR(ResponseStatusCodeConstant.GENERAL_ERROR_CODE, "Any error occur"),
+    INVALID_CREDENTIALS(ResponseStatusCodeConstant.MERCHANT_CLIENT_ERROR_CODE, "Unauthorized"),
+    INVALID_INPUT(ResponseStatusCodeConstant.INVALID_REQUEST, "Input value is invalid"),
+    FIELD_MISSING(ResponseStatusCodeConstant.FIELD_MISSING_CODE, "Field missing code"),
     INVALID_DATA_TYPE(ResponseStatusCodeConstant.INVALID_DATA_TYPE_CODE, "Field %s is in invalid data type"),
     ERROR_NOT_FOUND(ResponseStatusCodeConstant.ERROR_NOT_FOUND_CODE, "Error not found"),
     ERROR_ALREADY_IN_DATA(ResponseStatusCodeConstant.ERROR_ALREADY_IN_DATA, "already in the data"),

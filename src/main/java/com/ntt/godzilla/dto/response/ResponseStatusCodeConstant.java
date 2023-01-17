@@ -1,15 +1,15 @@
 package com.ntt.godzilla.dto.response;
 
 public interface ResponseStatusCodeConstant {
-    String SUCCESS_CODE = "000001";
-    String GENERAL_ERROR_CODE = "000002";
-    String MERCHANT_CLIENT_ERROR_CODE = "000003";
-    String INVALID_REQUEST = "000004";
-    String FIELD_MISSING_CODE = "000005";
-    String ERROR_NOT_FOUND_CODE = "000006";
-    String INVALID_DATA_TYPE_CODE = "000007";
-    String ERROR_ALREADY_IN_DATA = "000008";
-    String ID_NOT_NULL = "000009";
-    String DATA_IN_USE_CANNOT_BE_DELETE_OR_UPDATE = "000010";
-    String NO_DATA = "000011";
+    String SUCCESS_CODE = "R0000";
+    String GENERAL_ERROR_CODE = "E0000";
+    String MERCHANT_CLIENT_ERROR_CODE = "E0001";
+    String INVALID_REQUEST = "E0002";
+    String FIELD_MISSING_CODE = "E0003";
+    String ERROR_NOT_FOUND_CODE = "E0004";
+    String INVALID_DATA_TYPE_CODE = "E0005";
+    String ERROR_ALREADY_IN_DATA = "E0006";
+    String ID_NOT_NULL = "E0007";
+    String DATA_IN_USE_CANNOT_BE_DELETE_OR_UPDATE = "E0008";
+    String NO_DATA = "E0009";
 }

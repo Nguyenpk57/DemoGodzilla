@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RecordListResponseDTO {
+public class RecordListResponse {
     @JsonProperty("page")
     private int currentPage;
     @JsonProperty("offset")
