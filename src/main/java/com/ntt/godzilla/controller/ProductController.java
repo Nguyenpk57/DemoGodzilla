@@ -38,7 +38,7 @@ public class ProductController extends BaseController {
     @Autowired
     private IProductService productService;
 
-    @RequestMapping(method = RequestMethod.POST, path = "/get")
+    @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> get(@RequestBody ProductRequestDTO requestDTO) {
         try {
             Page<Product> products = productService.getProductsByName(requestDTO, buildPageRequest(requestDTO));
