@@ -5,6 +5,7 @@ import com.ntt.godzilla.dto.response.RecordListResponse;
 import com.ntt.godzilla.entity.Product;
 import com.ntt.godzilla.factory.ResponseFactory;
 import com.ntt.godzilla.service.IProductService;
+import javax.annotation.security.RolesAllowed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +39,8 @@ public class ProductController extends BaseController {
     @Autowired
     private IProductService productService;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.POST, path = "/get")
+    @RolesAllowed("admin")
     public ResponseEntity<?> get(@RequestBody ProductRequestDTO requestDTO) {
         try {
             Page<Product> products = productService.getProductsByName(requestDTO, buildPageRequest(requestDTO));
