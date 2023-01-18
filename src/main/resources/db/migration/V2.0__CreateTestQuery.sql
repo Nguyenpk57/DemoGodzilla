@@ -5,9 +5,9 @@ CREATE TABLE product
      product_name     VARCHAR(100) NOT NULL,
      description      VARCHAR(500),
 	 price 			  DECIMAL (15,4),
-	 discount		  INT(3)     NOT NULL,
+	 discount		  INT(3),
 	 
-	 create_user      VARCHAR(90) NOT NULL,
+	 create_user      VARCHAR(90),
      create_time 	  DATETIME,
 	 update_user      VARCHAR(90),
      update_time 	  DATETIME
@@ -19,8 +19,8 @@ CREATE TABLE category
     category_name     VARCHAR(100) NOT NULL,  
     description       VARCHAR(500),
 	
-	create_user       VARCHAR(90) NOT NULL,
-    create_time       DATETIME NOT NULL,
+	create_user       VARCHAR(90),
+    create_time       DATETIME,
 	update_user       VARCHAR(90),
     update_time 	  DATETIME
     
