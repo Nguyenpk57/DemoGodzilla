@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CategoryRepository extends GenericJpaRepository<Category,Long> {
     Page<Category> findCategoryByCategoryName(String categoryName,  Pageable pageable);
+    void removeByCategoryId(Long id);
 }

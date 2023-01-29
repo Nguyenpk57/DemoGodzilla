@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = "/category")
+@RequestMapping(value = "/categories")
 public class CategoryController extends BaseController {
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
 
@@ -34,7 +34,7 @@ public class CategoryController extends BaseController {
         return request;
     }
 
-    @PostMapping("/list-categories")
+    @PostMapping("/list")
     public ResponseEntity<?> getAllCategories(@RequestBody CategoryRequestDTO requestDTO){
         Page<Category> categories = categoryService.getCategoryByName(requestDTO, buildPageRequest(requestDTO));
         return responseFactory.success(RecordListResponse.builder()
@@ -50,6 +50,6 @@ public class CategoryController extends BaseController {
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteCategory(@PathVariable Long id){
-        return responseFactory.success();
+        return responseFactory.success(categoryService.deleteCategory(id));
     }
 }
