@@ -21,7 +21,7 @@
       image: quay.io/keycloak/keycloak:20.0.3
       container_name: keycloak
       volumes:
-        - /mnt/c/Users/vtanh/Documents/Projects/DemoGodzilla/keycloak:/home
+#        - /mnt/c/Users/vtanh/Documents/Projects/DemoGodzilla/keycloak:/home
         - ./keycloak/DemoGodZilla-realm.json:/opt/jboss/keycloak/imports/DemoGodZilla-realm.json
       environment:
         - KEYCLOAK_ADMIN=admin
