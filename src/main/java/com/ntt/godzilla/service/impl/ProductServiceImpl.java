@@ -33,9 +33,9 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public Page<Product> getProductsByName(ProductRequestDTO requestDTO, Pageable pageable) {
         if (StringUtils.isEmpty(requestDTO.getProductName())) {
-            return productRepository.findAll(pageable);
+            return productRepository.findAllByStatus(Product.NEW, pageable);
         }
-        return productRepository.getByProductNameContaining(requestDTO.getProductName(), pageable);
+        return productRepository.getByProductNameContainingAndStatus(requestDTO.getProductName(), Product.NEW, pageable);
     }
 
     @Override
