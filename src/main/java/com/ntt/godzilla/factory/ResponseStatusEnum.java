@@ -9,6 +9,7 @@ public enum ResponseStatusEnum implements IResponseStatus {
     INVALID_CREDENTIALS(ResponseStatusCodeConstant.MERCHANT_CLIENT_ERROR_CODE, "Unauthorized"),
     INVALID_INPUT(ResponseStatusCodeConstant.INVALID_REQUEST, "Input value is invalid"),
     FIELD_MISSING(ResponseStatusCodeConstant.FIELD_MISSING_CODE, "Field missing code"),
+    BODY_MISSING(ResponseStatusCodeConstant.FIELD_MISSING_CODE, "Request body is missing code"),
     INVALID_DATA_TYPE(ResponseStatusCodeConstant.INVALID_DATA_TYPE_CODE, "Field %s is in invalid data type"),
     ERROR_NOT_FOUND(ResponseStatusCodeConstant.ERROR_NOT_FOUND_CODE, "Error not found"),
     ERROR_ALREADY_IN_DATA(ResponseStatusCodeConstant.ERROR_ALREADY_IN_DATA, "already in the data"),
