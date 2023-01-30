@@ -1,47 +1,34 @@
 package com.ntt.godzilla.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
+import com.ntt.godzilla.repository.ProductCategoryId;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Date;
 
-
 @Entity
-@Table(name = "product")
+@Table(name = "product_category")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product {
+@IdClass(ProductCategoryId.class)
+@Builder
+public class ProductCategory {
+
     public static final Integer NEW = 1;
     public static final Integer DELETE = 9;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
     private Long productId;
 
-    @Column(name = "product_code")
-    private String productCode;
-
-    @Column(name = "product_name")
-    private String productName;
-
-    @Column(name = "description")
-    private String description;
-
-    @Column(name = "price")
-    private BigDecimal price;
-
-    @Column(name = "discount")
-    private Integer discount;
+    @Id
+    @Column(name = "category_id")
+    private Long categoryId;
 
     @Column(name = "status")
     private Integer status = 1;
