@@ -1,6 +1,6 @@
 CREATE TABLE product
 (
-     product_id       INT      NOT NULL,
+     product_id       INT      NOT NULL AUTO_INCREMENT,
      product_code     VARCHAR(30) NOT NULL,
      product_name     VARCHAR(100) NOT NULL,
      description      VARCHAR(500),
@@ -10,19 +10,21 @@ CREATE TABLE product
 	 create_user      VARCHAR(90),
      create_time 	  DATETIME,
 	 update_user      VARCHAR(90),
-     update_time 	  DATETIME
+     update_time 	  DATETIME,
+     PRIMARY KEY (product_id)
 );
 
 CREATE TABLE category
 (
-    category_id       INT      NOT NULL,
+    category_id       INT      NOT NULL  AUTO_INCREMENT,
     category_name     VARCHAR(100) NOT NULL,  
     description       VARCHAR(500),
 	
 	create_user       VARCHAR(90),
     create_time       DATETIME,
 	update_user       VARCHAR(90),
-    update_time 	  DATETIME
+    update_time 	  DATETIME,
+    PRIMARY KEY (category_id)
     
 );
 
@@ -34,12 +36,13 @@ CREATE TABLE product_category -- Associative table.
 	create_user       VARCHAR(90),
     create_time       DATETIME,
 	update_user       VARCHAR(90),
-    update_time 	  DATETIME
+    update_time 	  DATETIME,
+    PRIMARY KEY (`product_id`, `category_id`)
 );
 
 
 create table image (
-    image_id        INT  NOT NULL,
+    image_id        INT  NOT NULL AUTO_INCREMENT,
 	product_id      INT  NOT NULL,
     image_type      VARCHAR(10),
     image_size      INT,
@@ -49,6 +52,8 @@ create table image (
 	create_user     VARCHAR(90),
     create_time     DATETIME,
 	update_user     VARCHAR(90),
-    update_time 	DATETIME
+    update_time 	DATETIME,
+    PRIMARY KEY (`image_id`)
 );
+
 
