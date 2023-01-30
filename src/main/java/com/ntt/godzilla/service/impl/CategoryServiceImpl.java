@@ -28,9 +28,9 @@ public class CategoryServiceImpl implements ICategoryService {
     @Override
     public Page<Category> getCategoryByName(CategoryRequestDTO requestDTO, Pageable pageable) {
         if (!StringUtils.hasText(requestDTO.getCategoryName())){
-            return categoryRepository.findAll(pageable);
+            return categoryRepository.findCategoryByStatus(Constant.NEW_FLAG,pageable);
         }
-         return categoryRepository.findCategoryByCategoryNameContainingAndStatus(requestDTO.getCategoryName(),Constant.NEW_FLAG, pageable);
+         return categoryRepository.findCategoryByStatusAndCategoryNameContaining(Constant.NEW_FLAG,requestDTO.getCategoryName(), pageable);
     }
     @Transactional
     @Override

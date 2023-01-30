@@ -1,0 +1,651 @@
+2023-01-30 15:45:20.787 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 15:45:20.839 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2023-01-30 15:45:21.746 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 15:45:21.757 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:45:21.758 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 15:45:21.759 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 15:45:21.907 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 15:45:21.907 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1828 ms
+2023-01-30 15:45:22.026 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 15:45:22.350 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 15:45:22.404 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 15:45:22.404 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 15:45:22.404 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 15:45:22.463 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 15:45:22.528 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.029s)
+2023-01-30 15:45:22.545 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 15:45:22.546 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 15:45:22.682 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 15:45:22.736 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 15:45:22.911 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 15:45:23.095 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:45:23.745 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:45:23.754 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:45:23.853 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 15:45:23.865 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 15:45:23.875 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:45:23.885 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:45:24.612 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 15:45:24.926 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:45:24.948 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 15:45:27.239 INFO 173 [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 15:45:27.240 INFO 525 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 15:45:27.241 INFO 547 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2023-01-30 15:45:27.359 TRACE 52 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [null]
+2023-01-30 15:45:27.361 TRACE 52 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [TIMESTAMP] - [null]
+2023-01-30 15:45:27.362 TRACE 52 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [VARCHAR] - [null]
+2023-01-30 15:45:27.362 TRACE 52 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [4] as [VARCHAR] - [null]
+2023-01-30 15:45:27.362 TRACE 52 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [5] as [VARCHAR] - [null]
+2023-01-30 15:45:27.363 TRACE 64 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [6] as [INTEGER] - [1]
+2023-01-30 15:45:27.363 TRACE 52 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [7] as [TIMESTAMP] - [null]
+2023-01-30 15:45:27.364 TRACE 52 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [8] as [VARCHAR] - [null]
+2023-01-30 15:45:27.376 WARN 137 [http-nio-8080-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper: SQL Error: 1048, SQLState: 23000
+2023-01-30 15:45:27.377 ERROR 142 [http-nio-8080-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper: Column 'category_name' cannot be null
+2023-01-30 15:45:46.683 WARN 434 [http-nio-8080-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver: Failure in @ExceptionHandler com.ntt.godzilla.exception.ExceptionHandlerController#handleException(Exception, WebRequest)
+java.lang.ClassCastException: class com.fasterxml.jackson.core.JsonParseException cannot be cast to class com.fasterxml.jackson.databind.JsonMappingException (com.fasterxml.jackson.core.JsonParseException and com.fasterxml.jackson.databind.JsonMappingException are in unnamed module of loader 'app')
+	at com.ntt.godzilla.exception.ExceptionHandlerController.handleHttpMessageNotReadable(ExceptionHandlerController.java:47)
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(ResponseEntityExceptionHandler.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-01-30 15:45:46.696 WARN 208 [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver: Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\' (code 92)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('\' (code 92)): was expecting double-quote to start field name<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 2]]
+2023-01-30 15:45:57.891 TRACE 52 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [null]
+2023-01-30 15:45:57.891 TRACE 64 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [CHAR] - [\]
+2023-01-30 15:45:57.892 TRACE 64 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [INTEGER] - [1]
+2023-01-30 15:46:21.982 TRACE 64 [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [%category%]
+2023-01-30 15:46:21.983 TRACE 64 [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [CHAR] - [\]
+2023-01-30 15:46:21.983 TRACE 64 [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [INTEGER] - [1]
+2023-01-30 15:46:21.986 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 15:46:21.989 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 15:46:21.990 TRACE 50 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:46:21.990 TRACE 50 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:46:21.990 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 15:46:21.990 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:46:21.991 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:46:21.991 TRACE 50 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:46:21.992 TRACE 50 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:46:21.993 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 15:46:21.994 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 15:46:21.994 TRACE 50 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:46:21.995 TRACE 50 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:46:21.995 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 15:46:21.996 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:46:21.996 TRACE 60 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:46:21.996 TRACE 50 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:46:21.996 TRACE 50 [http-nio-8080-exec-6] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:46:37.199 TRACE 64 [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [%category%]
+2023-01-30 15:46:37.200 TRACE 64 [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [CHAR] - [\]
+2023-01-30 15:46:37.200 TRACE 64 [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [INTEGER] - [1]
+2023-01-30 15:46:37.202 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 15:46:37.202 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 15:46:37.202 TRACE 50 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:46:37.202 TRACE 50 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:46:37.203 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 15:46:37.203 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:46:37.203 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:46:37.203 TRACE 50 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:46:37.204 TRACE 50 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:46:37.204 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 15:46:37.205 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 15:46:37.205 TRACE 50 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:46:37.205 TRACE 50 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:46:37.205 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 15:46:37.206 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:46:37.206 TRACE 60 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:46:37.206 TRACE 50 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:46:37.207 TRACE 50 [http-nio-8080-exec-7] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:47:24.009 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown initiated...
+2023-01-30 15:47:24.013 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown completed.
+2023-01-30 15:47:24.013 INFO 651 [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:47:24.014 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-30 15:47:24.017 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-30 15:47:28.885 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 15:47:28.938 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2023-01-30 15:47:29.914 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 15:47:29.924 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:47:29.925 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 15:47:29.925 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 15:47:30.076 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 15:47:30.076 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1904 ms
+2023-01-30 15:47:30.250 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 15:47:30.752 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 15:47:30.817 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 15:47:30.818 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 15:47:30.819 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 15:47:30.877 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 15:47:30.937 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.026s)
+2023-01-30 15:47:30.953 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 15:47:30.955 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 15:47:31.104 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 15:47:31.172 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 15:47:31.386 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 15:47:31.603 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:47:32.257 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:47:32.266 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:47:32.375 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 15:47:32.393 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 15:47:32.405 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:47:32.418 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:47:33.586 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 15:47:33.915 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:47:33.937 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 15:47:43.138 INFO 173 [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 15:47:43.139 INFO 525 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 15:47:43.141 INFO 547 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2023-01-30 15:47:45.222 TRACE 52 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [null]
+2023-01-30 15:47:45.223 TRACE 64 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [CHAR] - [\]
+2023-01-30 15:47:45.224 TRACE 64 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [INTEGER] - [1]
+2023-01-30 15:47:45.229 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 15:47:45.234 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 15:47:45.235 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:47:45.235 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:47:45.236 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 15:47:45.236 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:47:45.237 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:47:45.237 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:47:45.237 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:47:45.238 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 15:47:45.239 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 15:47:45.239 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:47:45.239 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:47:45.239 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 15:47:45.240 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:47:45.240 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:47:45.240 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:47:45.240 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:51:10.982 TRACE 52 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [null]
+2023-01-30 15:51:10.982 TRACE 64 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [CHAR] - [\]
+2023-01-30 15:51:10.983 TRACE 64 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [INTEGER] - [1]
+2023-01-30 15:51:10.986 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 15:51:10.987 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 15:51:10.990 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:51:10.992 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:51:10.992 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 15:51:10.994 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:51:10.994 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:51:10.996 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:51:10.996 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:51:10.997 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 15:51:10.998 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 15:51:10.998 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:51:10.998 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:51:10.999 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 15:51:10.999 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:51:10.999 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:51:10.999 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:51:11.000 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:52:14.535 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown initiated...
+2023-01-30 15:52:14.540 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown completed.
+2023-01-30 15:52:14.540 INFO 651 [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:52:14.541 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-30 15:52:14.544 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-30 15:52:19.490 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 15:52:19.539 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2023-01-30 15:52:20.513 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 15:52:20.524 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:52:20.525 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 15:52:20.525 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 15:52:20.680 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 15:52:20.681 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1912 ms
+2023-01-30 15:52:20.805 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 15:52:21.128 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 15:52:21.194 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 15:52:21.195 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 15:52:21.196 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 15:52:21.263 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 15:52:21.346 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.038s)
+2023-01-30 15:52:21.366 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 15:52:21.369 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 15:52:21.497 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 15:52:21.556 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 15:52:21.729 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 15:52:21.918 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:52:22.477 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:52:22.486 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:52:22.582 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 15:52:22.595 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 15:52:22.603 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:52:22.612 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:52:23.336 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 15:52:23.667 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:52:23.690 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 15:52:27.449 INFO 173 [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 15:52:27.450 INFO 525 [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 15:52:27.452 INFO 547 [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2023-01-30 15:52:29.592 TRACE 64 [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [%1%]
+2023-01-30 15:52:29.593 TRACE 64 [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [CHAR] - [\]
+2023-01-30 15:52:29.597 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [1]
+2023-01-30 15:52:29.603 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 1]
+2023-01-30 15:52:29.604 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:52:29.604 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:52:29.604 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 1]
+2023-01-30 15:52:29.605 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:52:29.605 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [9]
+2023-01-30 15:52:29.605 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:52:29.606 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:54:25.878 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown initiated...
+2023-01-30 15:54:25.883 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown completed.
+2023-01-30 15:54:25.883 INFO 651 [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:54:25.884 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-30 15:54:25.887 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-30 15:54:29.382 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 15:54:29.435 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2023-01-30 15:54:30.369 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 15:54:30.382 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:54:30.383 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 15:54:30.383 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 15:54:30.533 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 15:54:30.534 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1874 ms
+2023-01-30 15:54:30.663 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 15:54:31.002 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 15:54:31.060 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 15:54:31.061 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 15:54:31.061 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 15:54:31.113 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 15:54:31.178 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.027s)
+2023-01-30 15:54:31.192 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 15:54:31.193 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 15:54:31.333 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 15:54:31.397 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 15:54:31.581 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 15:54:31.762 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:54:32.370 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:54:32.380 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:54:32.477 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 15:54:32.490 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 15:54:32.499 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:54:32.509 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:54:33.198 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 15:54:33.511 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:54:33.538 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 15:54:35.187 INFO 173 [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 15:54:35.188 INFO 525 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 15:54:35.190 INFO 547 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2023-01-30 15:54:37.574 TRACE 64 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [%1%]
+2023-01-30 15:54:37.575 TRACE 64 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [CHAR] - [\]
+2023-01-30 15:54:37.580 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [1]
+2023-01-30 15:54:37.585 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 1]
+2023-01-30 15:54:37.586 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:54:37.586 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:54:37.587 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 1]
+2023-01-30 15:54:37.587 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:54:37.588 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [9]
+2023-01-30 15:54:37.588 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:54:37.588 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:14.384 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown initiated...
+2023-01-30 15:55:14.388 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown completed.
+2023-01-30 15:55:14.388 INFO 651 [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:55:14.389 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-30 15:55:14.392 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-30 15:55:19.149 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 15:55:19.206 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2023-01-30 15:55:20.151 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 15:55:20.162 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:55:20.163 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 15:55:20.163 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 15:55:20.306 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 15:55:20.306 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1877 ms
+2023-01-30 15:55:20.431 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 15:55:20.756 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 15:55:20.811 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 15:55:20.812 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 15:55:20.812 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 15:55:20.860 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 15:55:20.927 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.024s)
+2023-01-30 15:55:20.937 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 15:55:20.938 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 15:55:21.075 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 15:55:21.137 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 15:55:21.321 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 15:55:21.502 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:55:22.098 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:55:22.107 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:55:22.200 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 15:55:22.213 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 15:55:22.221 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:55:22.231 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:55:22.948 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 15:55:23.262 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:55:23.285 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 15:55:25.571 INFO 173 [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 15:55:25.572 INFO 525 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 15:55:25.574 INFO 547 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Completed initialization in 2 ms
+2023-01-30 15:55:28.591 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [1]
+2023-01-30 15:55:28.598 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 1]
+2023-01-30 15:55:28.599 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:28.600 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:28.600 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 1]
+2023-01-30 15:55:28.600 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:55:28.601 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [9]
+2023-01-30 15:55:28.601 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:28.602 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:28.603 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 15:55:28.603 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 15:55:28.603 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:28.603 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:28.604 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 15:55:28.604 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:55:28.605 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:55:28.605 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:28.605 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:28.605 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 15:55:28.606 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 15:55:28.606 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:28.606 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:28.606 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 15:55:28.607 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:55:28.607 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:55:28.607 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:28.607 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:48.154 TRACE 64 [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [VARCHAR] - [%category%]
+2023-01-30 15:55:48.154 TRACE 64 [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [CHAR] - [\]
+2023-01-30 15:55:48.155 TRACE 64 [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [INTEGER] - [1]
+2023-01-30 15:55:48.156 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 15:55:48.156 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 15:55:48.157 TRACE 50 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:48.157 TRACE 50 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:48.157 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 15:55:48.158 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:55:48.158 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:55:48.158 TRACE 50 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:48.158 TRACE 50 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:48.159 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 15:55:48.159 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 15:55:48.159 TRACE 50 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:48.159 TRACE 50 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:55:48.160 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 15:55:48.160 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:55:48.160 TRACE 60 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:55:48.160 TRACE 50 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:55:48.161 TRACE 50 [http-nio-8080-exec-3] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:57:13.515 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown initiated...
+2023-01-30 15:57:13.519 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown completed.
+2023-01-30 15:57:13.520 INFO 651 [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:57:13.521 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-30 15:57:13.524 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-30 15:57:18.291 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 15:57:18.341 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2023-01-30 15:57:19.313 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 15:57:19.324 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:57:19.325 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 15:57:19.326 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 15:57:19.472 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 15:57:19.473 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1948 ms
+2023-01-30 15:57:19.620 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 15:57:19.940 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 15:57:20.001 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 15:57:20.002 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 15:57:20.002 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 15:57:20.054 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 15:57:20.117 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.027s)
+2023-01-30 15:57:20.129 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 15:57:20.132 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 15:57:20.284 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 15:57:20.341 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 15:57:20.523 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 15:57:20.720 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:57:21.335 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:57:21.344 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:57:21.461 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 15:57:21.474 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 15:57:21.483 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:57:21.492 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:57:22.243 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 15:57:22.562 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:57:22.589 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 15:57:24.993 INFO 173 [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 15:57:24.994 INFO 525 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 15:57:24.996 INFO 547 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2023-01-30 15:58:18.186 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown initiated...
+2023-01-30 15:58:18.190 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown completed.
+2023-01-30 15:58:18.191 INFO 651 [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:58:18.191 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-30 15:58:18.194 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-30 15:58:22.980 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 15:58:23.029 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2023-01-30 15:58:23.972 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 15:58:23.982 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:58:23.982 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 15:58:23.982 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 15:58:24.129 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 15:58:24.130 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1853 ms
+2023-01-30 15:58:24.256 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 15:58:24.579 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 15:58:24.630 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 15:58:24.631 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 15:58:24.631 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 15:58:24.676 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 15:58:24.730 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.028s)
+2023-01-30 15:58:24.742 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 15:58:24.743 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 15:58:24.874 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 15:58:24.931 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 15:58:25.102 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 15:58:25.291 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:58:25.874 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:58:25.882 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:58:25.978 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 15:58:25.990 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 15:58:26.000 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 15:58:26.009 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 15:58:26.694 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 15:58:27.005 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 15:58:27.028 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 15:58:54.619 INFO 173 [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 15:58:54.620 INFO 525 [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 15:58:54.622 INFO 547 [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2023-01-30 15:58:58.044 TRACE 64 [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [INTEGER] - [1]
+2023-01-30 15:58:58.045 TRACE 64 [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [VARCHAR] - [%category%]
+2023-01-30 15:58:58.045 TRACE 64 [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [CHAR] - [\]
+2023-01-30 15:58:58.050 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [1]
+2023-01-30 15:58:58.055 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 1]
+2023-01-30 15:58:58.056 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:58:58.056 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:58:58.056 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 1]
+2023-01-30 15:58:58.057 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:58:58.057 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [9]
+2023-01-30 15:58:58.058 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:58:58.058 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:58:58.059 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 15:58:58.059 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 15:58:58.060 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:58:58.060 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:58:58.060 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 15:58:58.060 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:58:58.061 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:58:58.061 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:58:58.061 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:58:58.061 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 15:58:58.062 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 15:58:58.062 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:58:58.062 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 15:58:58.063 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 15:58:58.063 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 15:58:58.063 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 15:58:58.063 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 15:58:58.064 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 15:59:52.737 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown initiated...
+2023-01-30 15:59:52.741 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown completed.
+2023-01-30 15:59:52.742 INFO 651 [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 15:59:52.742 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-30 15:59:52.745 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-30 16:00:35.244 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 16:00:35.296 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+2023-01-30 16:00:36.245 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 16:00:36.255 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 16:00:36.256 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 16:00:36.256 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 16:00:36.405 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 16:00:36.406 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1858 ms
+2023-01-30 16:00:36.528 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 16:00:36.852 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 16:00:36.905 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 16:00:36.905 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 16:00:36.906 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 16:00:36.953 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 16:00:37.010 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.023s)
+2023-01-30 16:00:37.021 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 16:00:37.023 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 16:00:37.152 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 16:00:37.210 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 16:00:37.382 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 16:00:37.573 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 16:00:38.157 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 16:00:38.165 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 16:00:38.260 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 16:00:38.273 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 16:00:38.283 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 16:00:38.293 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 16:00:39.075 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 16:00:39.405 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 16:00:39.429 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 16:00:42.519 INFO 173 [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 16:00:42.520 INFO 525 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 16:00:42.522 INFO 547 [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2023-01-30 16:00:45.193 TRACE 64 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [INTEGER] - [1]
+2023-01-30 16:00:45.194 TRACE 64 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [VARCHAR] - [%category%]
+2023-01-30 16:00:45.194 TRACE 64 [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [CHAR] - [\]
+2023-01-30 16:00:45.199 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 16:00:45.204 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 16:00:45.205 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:00:45.205 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 16:00:45.206 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 16:00:45.206 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 16:00:45.207 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 16:00:45.207 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:00:45.207 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 16:00:45.208 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 16:00:45.208 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 16:00:45.209 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:00:45.209 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 16:00:45.209 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 16:00:45.209 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 16:00:45.210 TRACE 60 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 16:00:45.210 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:00:45.210 TRACE 50 [http-nio-8080-exec-1] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 16:00:58.128 TRACE 64 [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [INTEGER] - [1]
+2023-01-30 16:00:58.129 TRACE 52 [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [VARCHAR] - [null]
+2023-01-30 16:00:58.131 TRACE 64 [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [CHAR] - [\]
+2023-01-30 16:01:20.992 TRACE 64 [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [INTEGER] - [1]
+2023-01-30 16:01:20.993 TRACE 52 [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [VARCHAR] - [null]
+2023-01-30 16:01:20.993 TRACE 64 [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [CHAR] - [\]
+2023-01-30 16:01:39.840 TRACE 64 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [INTEGER] - [1]
+2023-01-30 16:01:39.840 TRACE 64 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [2] as [VARCHAR] - [%category%]
+2023-01-30 16:01:39.841 TRACE 64 [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder: binding parameter [3] as [CHAR] - [\]
+2023-01-30 16:01:39.842 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 16:01:39.843 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 16:01:39.843 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:01:39.843 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 16:01:39.844 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 16:01:39.844 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 16:01:39.845 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 16:01:39.845 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:01:39.845 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 16:01:39.846 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 16:01:39.846 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 16:01:39.848 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:01:39.849 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 16:01:39.849 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 16:01:39.850 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 16:01:39.850 TRACE 60 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 16:01:39.851 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:01:39.851 TRACE 50 [http-nio-8080-exec-5] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 16:03:06.778 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown initiated...
+2023-01-30 16:03:06.782 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Shutdown completed.
+2023-01-30 16:03:06.783 INFO 651 [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 16:03:06.783 INFO 350 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-01-30 16:03:06.786 INFO 352 [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-01-30 16:03:11.583 INFO 132 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-30 16:03:11.637 INFO 201 [main] o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+2023-01-30 16:03:12.588 INFO 108 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-01-30 16:03:12.598 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-30 16:03:12.599 INFO 173 [main] o.a.catalina.core.StandardService: Starting service [Tomcat]
+2023-01-30 16:03:12.599 INFO 173 [main] o.a.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-30 16:03:12.747 INFO 173 [main] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring embedded WebApplicationContext
+2023-01-30 16:03:12.748 INFO 292 [main] o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1861 ms
+2023-01-30 16:03:12.875 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-01-30 16:03:13.197 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-01-30 16:03:13.248 INFO 37 [main] o.f.c.i.license.VersionPrinter: Flyway Community Edition 8.5.13 by Redgate
+2023-01-30 16:03:13.249 INFO 37 [main] o.f.c.i.license.VersionPrinter: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-01-30 16:03:13.249 INFO 37 [main] o.f.c.i.license.VersionPrinter: 
+2023-01-30 16:03:13.297 INFO 37 [main] o.f.c.i.d.base.BaseDatabaseType: Database: jdbc:mysql://localhost:3308/godzilladbdemo (MySQL 8.0)
+2023-01-30 16:03:13.357 INFO 37 [main] o.f.core.internal.command.DbValidate: Successfully validated 3 migrations (execution time 00:00.031s)
+2023-01-30 16:03:13.370 INFO 37 [main] o.f.core.internal.command.DbMigrate: Current version of schema `godzilladbdemo`: 3.0
+2023-01-30 16:03:13.372 INFO 37 [main] o.f.core.internal.command.DbMigrate: Schema `godzilladbdemo` is up to date. No migration necessary.
+2023-01-30 16:03:13.501 INFO 31 [main] o.h.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-30 16:03:13.556 INFO 44 [main] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-30 16:03:13.738 INFO 56 [main] o.h.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-30 16:03:13.923 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 16:03:14.514 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 16:03:14.523 INFO 437 [main] o.s.o.j.LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-30 16:03:14.621 INFO 80 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Starting...
+2023-01-30 16:03:14.634 INFO 82 [main] com.zaxxer.hikari.HikariDataSource: HikariPool-2 - Start completed.
+2023-01-30 16:03:14.643 INFO 175 [main] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2023-01-30 16:03:14.652 INFO 52 [main] o.h.e.t.j.p.i.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-30 16:03:15.416 WARN 219 [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-30 16:03:15.736 INFO 173 [main] o.a.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2023-01-30 16:03:15.760 INFO 220 [main] o.s.b.w.e.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/core-api'
+2023-01-30 16:03:31.609 INFO 173 [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/core-api]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-30 16:03:31.610 INFO 525 [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2023-01-30 16:03:31.612 INFO 547 [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2023-01-30 16:03:33.804 TRACE 64 [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder: binding parameter [1] as [INTEGER] - [1]
+2023-01-30 16:03:33.808 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [2]
+2023-01-30 16:03:33.813 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 2]
+2023-01-30 16:03:33.815 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:03:33.815 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 16:03:33.815 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 2]
+2023-01-30 16:03:33.815 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 16:03:33.816 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 16:03:33.816 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:03:33.817 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]
+2023-01-30 16:03:33.818 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category1_0_] : [BIGINT]) - [3]
+2023-01-30 16:03:33.818 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([category2_0_] : [VARCHAR]) - [category 3]
+2023-01-30 16:03:33.819 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_t3_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:03:33.819 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([create_u4_0_] : [VARCHAR]) - [null]
+2023-01-30 16:03:33.819 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([descript5_0_] : [VARCHAR]) - [cate description 3]
+2023-01-30 16:03:33.820 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([slug6_0_] : [VARCHAR]) - [cate]
+2023-01-30 16:03:33.820 TRACE 60 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([status7_0_] : [INTEGER]) - [1]
+2023-01-30 16:03:33.820 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_t8_0_] : [TIMESTAMP]) - [null]
+2023-01-30 16:03:33.820 TRACE 50 [http-nio-8080-exec-2] o.h.t.descriptor.sql.BasicExtractor: extracted value ([update_u9_0_] : [VARCHAR]) - [null]

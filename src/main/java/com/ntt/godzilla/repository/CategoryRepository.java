@@ -11,7 +11,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CategoryRepository extends GenericJpaRepository<Category,Long> {
-    Page<Category> findCategoryByCategoryNameContainingAndStatus(String categoryName,int status, Pageable pageable);
+    Page<Category> findCategoryByStatus(int status, Pageable pageable);
+    Page<Category> findCategoryByStatusAndCategoryNameContaining(int status, String categoryName, Pageable pageable);
     void removeByCategoryId(long id);
 
     @Modifying
