@@ -18,9 +18,10 @@
         test: "mysqladmin ping -u root -p$${MYSQL_ROOT_PASSWORD}"
 
     keycloak:
-      image: quay.io/keycloak/keycloak:20.0.1
+      image: quay.io/keycloak/keycloak:20.0.3
       container_name: keycloak
       volumes:
+        - /mnt/c/Users/vtanh/Documents/Projects/DemoGodzilla/keycloak:/home
         - ./keycloak/DemoGodZilla-realm.json:/opt/jboss/keycloak/imports/DemoGodZilla-realm.json
       environment:
         - KEYCLOAK_ADMIN=admin
@@ -39,13 +40,13 @@
         - mysql
       healthcheck:
         test: "curl -f http://localhost:9090/admin || exit 1"
-
-    app:
-      image: 'docker-spring-boot-postgres:latest'
-      build:
-        context: .
-      container_name: app
-      ports:
-        - "8080:8080"
-      depends_on:
-        - keycloak
+#
+#    app:
+#      image: 'docker-spring-boot-postgres:latest'
+#      build:
+#        context: .
+#      container_name: app
+#      ports:
+#        - "8080:8080"
+#      depends_on:
+#        - keycloak
