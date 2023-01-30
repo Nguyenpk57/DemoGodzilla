@@ -6,7 +6,7 @@ CREATE TABLE product
     description  VARCHAR(500),
     price        DECIMAL(15, 4),
     discount     INT(3),
-    status       INT(1) DEFAULT '1' COMMENT '1 is new, 9 is delete',
+    status       INT(1) DEFAULT 1 COMMENT '1 is new, 9 is delete',
 
     create_user  VARCHAR(90),
     create_time  DATETIME,
@@ -20,7 +20,7 @@ CREATE TABLE category
     category_id   INT          NOT NULL AUTO_INCREMENT,
     category_name VARCHAR(100) NOT NULL,
     description   VARCHAR(500),
-    status        INT(1) DEFAULT '1' COMMENT '1 is new, 9 is delete',
+    status        INT(1) DEFAULT 1 COMMENT '1 is new, 9 is delete',
     slug          VARCHAR(100) NOT NULL,
 
     create_user   VARCHAR(90),
@@ -35,6 +35,7 @@ CREATE TABLE product_category -- Associative table.
 (
     product_id  INT NOT NULL,
     category_id INT NOT NULL,
+    status      INT(1) DEFAULT 1 COMMENT '1 is new, 9 is delete',
 
     create_user VARCHAR(90),
     create_time DATETIME,
