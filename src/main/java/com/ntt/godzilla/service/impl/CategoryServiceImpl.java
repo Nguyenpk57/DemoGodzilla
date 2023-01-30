@@ -6,6 +6,7 @@ import com.ntt.godzilla.exception.ValidationException;
 import com.ntt.godzilla.factory.ResponseStatusEnum;
 import com.ntt.godzilla.repository.CategoryRepository;
 import com.ntt.godzilla.service.ICategoryService;
+import com.ntt.godzilla.util.Constant;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -26,23 +27,20 @@ public class CategoryServiceImpl implements ICategoryService {
 
     @Override
     public Page<Category> getCategoryByName(CategoryRequestDTO requestDTO, Pageable pageable) {
-        if (StringUtils.hasText(requestDTO.getCategoryName())){
+        if (!StringUtils.hasText(requestDTO.getCategoryName())){
             return categoryRepository.findAll(pageable);
         }
-         return categoryRepository.findCategoryByCategoryName(requestDTO.getCategoryName(), pageable);
+         return categoryRepository.findCategoryByCategoryNameContainingAndStatus(requestDTO.getCategoryName(),Constant.NEW_FLAG, pageable);
     }
     @Transactional
     @Override
     public Category createCategory(CategoryRequestDTO requestDTO) {
         if (!ObjectUtils.isEmpty(requestDTO)){
             Category category = new Category();
-//            category.setCategoryId(requestDTO.getCategoryId());
             category.setCategoryName(requestDTO.getCategoryName());
             category.setDescription(requestDTO.getDescription());
-            category.setCreate_time(requestDTO.getCreateTime());
-            category.setCreate_user(requestDTO.getCreateUser());
-            category.setUpdateUser(requestDTO.getUpdateUser());
-            category.setUpdateTime(requestDTO.getUpdateTime());
+            category.setSlug(requestDTO.getSlug());
+            category.setStatus(Constant.NEW_FLAG);
            return categoryRepository.save(category);
         }
         throw new ValidationException(ResponseStatusEnum.BODY_MISSING);
@@ -59,7 +57,7 @@ public class CategoryServiceImpl implements ICategoryService {
         if (category.isEmpty()){
            throw new ValidationException(ResponseStatusEnum.ID_NOT_NULL);
         }
-        categoryRepository.removeByCategoryId(id);
+        categoryRepository.updateCategoryStatus(id, Constant.DELETE_FLAG);
         return true;
     }
 }

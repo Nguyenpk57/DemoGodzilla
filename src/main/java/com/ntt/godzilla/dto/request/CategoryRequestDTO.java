@@ -12,19 +12,11 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryRequestDTO extends BaseRequestDTO{
-    @JsonProperty("categoryId")
-    private Long categoryId;
+public class CategoryRequestDTO extends BaseRequestDTO {
     @JsonProperty("categoryName")
     private String categoryName;
     @JsonProperty("description")
     private String description;
-    @JsonProperty("createUser")
-    private String createUser;
-    @JsonProperty("createTime")
-    private Date createTime;
-    @JsonProperty("updateUser")
-    private String updateUser;
-    @JsonProperty("updateTime")
-    private Date updateTime;
+    @JsonProperty("slug")
+    private String slug;
 }
