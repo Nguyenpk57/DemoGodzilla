@@ -1,1 +1,0 @@
-2023-01-30 15:45:27.377 ERROR 142 [http-nio-8080-exec-1] o.h.e.jdbc.spi.SqlExceptionHelper: Column 'category_name' cannot be null

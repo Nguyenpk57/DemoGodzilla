@@ -137,27 +137,19 @@
         </dependency>
         <!--END projectlombok-->
 
-<!--        &lt;!&ndash;START keycloak-starter&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.keycloak</groupId>-->
-<!--            <artifactId>keycloak-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash;END keycloak-starter&ndash;&gt;-->
+        <!--START keycloak-starter-->
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-boot-starter</artifactId>
+        </dependency>
+        <!--END keycloak-starter-->
 
-<!--        &lt;!&ndash;START keycloak-security-adapter&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.keycloak</groupId>-->
-<!--            <artifactId>keycloak-spring-security-adapter</artifactId>-->
-<!--            <version>20.0.3</version>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash;END keycloak-security-adapter&ndash;&gt;-->
-
-<!--        &lt;!&ndash;START spring-sercurity&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash;END spring-sercurity&ndash;&gt;-->
+        <!--START spring-sercurity-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!--END spring-sercurity-->
 
         <!--START swagger to gen document-->
         <dependency>
