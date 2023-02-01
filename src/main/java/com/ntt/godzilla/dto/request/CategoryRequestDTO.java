@@ -15,6 +15,4 @@ public class CategoryRequestDTO extends BaseRequestDTO {
     private String categoryName;
     @JsonProperty("description")
     private String description;
-    @JsonProperty("slug")
-    private String slug;
 }

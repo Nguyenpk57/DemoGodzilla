@@ -36,6 +36,14 @@ public class ResponseFactory {
         return ResponseEntity.ok(responseObject);
     }
 
+    public ResponseEntity success(HttpStatus httpStatus, String errorCode, String message) {
+        ResponseStatus responseStatus = new ResponseStatus();
+        GeneralResponse<Object> responseObject = new GeneralResponse();
+        responseStatus.setCode(errorCode);
+        responseStatus.setMessage(message);
+        responseObject.setStatus(responseStatus);
+        return new ResponseEntity(responseObject, httpStatus);
+    }
     public ResponseEntity error(HttpStatus httpStatus, String errorCode, String errorMessage) {
         ResponseStatus responseStatus = new ResponseStatus();
         GeneralResponse<Object> responseObject = new GeneralResponse();

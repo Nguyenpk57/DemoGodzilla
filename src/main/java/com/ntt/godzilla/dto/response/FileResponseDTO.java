@@ -11,5 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class FileResponseDTO {
     private String fileName;
-    private Long fileSize;
+    private String fileDownloadUri;
+    private String fileType;
+    private long size;
 }
