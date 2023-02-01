@@ -1,4 +1,4 @@
-package com.ntt.godzilla.repository;
+package com.ntt.godzilla.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

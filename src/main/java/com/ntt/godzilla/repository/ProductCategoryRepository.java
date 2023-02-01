@@ -1,6 +1,7 @@
 package com.ntt.godzilla.repository;
 
 import com.ntt.godzilla.entity.ProductCategory;
+import com.ntt.godzilla.entity.ProductCategoryId;
 import com.slyak.spring.jpa.GenericJpaRepository;
 
 import java.util.List;
