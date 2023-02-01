@@ -41,7 +41,9 @@ public class CategoryServiceImpl implements ICategoryService {
             category.setDescription(requestDTO.getDescription());
             category.setSlug(requestDTO.getSlug());
             category.setStatus(Constant.NEW_FLAG);
-           return categoryRepository.save(category);
+            categoryRepository.save(category);
+            categoryRepository.flush();
+           return category;
         }
         throw new ValidationException(ResponseStatusEnum.BODY_MISSING);
     }
