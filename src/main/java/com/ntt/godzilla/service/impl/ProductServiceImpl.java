@@ -51,7 +51,7 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public List<Product> getProductsByCategoryId(Long categoryId) {
         List<Product> products = new ArrayList<>();
-        List<ProductCategory> productCategories = productCategoryRepository.findAllByCategoryId(categoryId);
+        List<ProductCategory> productCategories = productCategoryRepository.findAllByCategoryIdAndStatus(categoryId, ProductCategory.NEW);
         List<Long> productIds = productCategories.stream()
                 .map(ProductCategory::getProductId)
                 .collect(Collectors.toList());
@@ -127,7 +127,7 @@ public class ProductServiceImpl implements IProductService {
 
         if (!Objects.isNull(requestDTO.getCategoryIds())) {
             //delete all old list product category by product id
-            List<ProductCategory> productCategoriesDelete = productCategoryRepository.findAllByProductId(requestDTO.getProductId());
+            List<ProductCategory> productCategoriesDelete = productCategoryRepository.findAllByProductIdAndStatus(requestDTO.getProductId(), ProductCategory.NEW);
             productCategoriesDelete.forEach(productCategory -> {
                 productCategory.setStatus(ProductCategory.DELETE);
             });
@@ -145,7 +145,7 @@ public class ProductServiceImpl implements IProductService {
         product.setStatus(Product.DELETE);
         productRepository.save(product);
 
-        List<ProductCategory> productCategories = productCategoryRepository.findAllByProductId(productId);
+        List<ProductCategory> productCategories = productCategoryRepository.findAllByProductIdAndStatus(productId, ProductCategory.NEW);
         productCategories.forEach(productCategory -> {
             productCategory.setStatus(ProductCategory.DELETE);
         });
@@ -158,7 +158,6 @@ public class ProductServiceImpl implements IProductService {
             ProductCategory productCategory = ProductCategory.builder()
                     .productId(productId)
                     .categoryId(id)
-                    .createUser(createUser)
                     .build();
             productCategoriesNew.add(productCategory);
         });

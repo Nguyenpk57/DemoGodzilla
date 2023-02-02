@@ -7,10 +7,10 @@ import com.slyak.spring.jpa.GenericJpaRepository;
 import java.util.List;
 
 public interface ProductCategoryRepository extends GenericJpaRepository<ProductCategory, ProductCategoryId> {
-    List<ProductCategory> findAllByCategoryId(Long categoryId);
+    List<ProductCategory> findAllByCategoryIdAndStatus(Long categoryId, int status);
 
     ProductCategory findProductCategoriesByProductIdAndCategoryId(Long categoryId, Long productId);
 
-    List<ProductCategory> findAllByProductId(Long productId);
+    List<ProductCategory> findAllByProductIdAndStatus(Long productId, int status);
 
 }

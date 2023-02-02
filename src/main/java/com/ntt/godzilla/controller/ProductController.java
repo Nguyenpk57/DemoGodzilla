@@ -36,9 +36,13 @@ public class ProductController extends BaseController {
     @Autowired
     private IProductService productService;
 
-    @RequestMapping(method = RequestMethod.POST, path = "/list-by-name")
+    @RequestMapping(method = RequestMethod.GET)
     @RolesAllowed("admin")
-    public ResponseEntity<?> getProductsByName(@RequestBody ProductRequestDTO requestDTO) {
+    public ResponseEntity<?> getProductsByNameOrCategoryId(@RequestParam(required = false, defaultValue = "") String productName,
+                                                           @RequestParam(required = false, defaultValue = "0") Integer page,
+                                                           @RequestParam(required = false, defaultValue = "10") Integer offset) {
+
+        ProductRequestDTO requestDTO = ProductRequestDTO.builder().productName(productName).page(page).offset(offset).build();
         Page<Product> products = productService.getProductsByName(requestDTO, buildPageRequest(requestDTO));
         return responseFactory.success(RecordListResponse.builder().currentPage(products.getNumber()).pageSize(products.getSize()).total(products.getTotalElements()).records(products.stream().collect(Collectors.toList())).build(), RecordListResponse.class);
     }
@@ -48,19 +52,19 @@ public class ProductController extends BaseController {
         return responseFactory.success(productService.getProductsById(productId));
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/list-by_category-id/{categoryId}")
-    public ResponseEntity<?> getProductsByCategoryId(@PathVariable Long categoryId) {
+    @RequestMapping(method = RequestMethod.GET, path = "/category-id")
+    public ResponseEntity<?> getProductsByCategoryId(@RequestParam Long categoryId) {
         List<Product> products = productService.getProductsByCategoryId(categoryId);
         return responseFactory.success(products);
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/add-product")
+    @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> addProduct(@RequestBody ProductRequestDTO requestDTO) {
         Product product = productService.addProduct(requestDTO);
         return responseFactory.success(product);
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/update-product")
+    @RequestMapping(method = RequestMethod.PUT)
     public ResponseEntity<?> updateProduct(@RequestBody ProductRequestDTO requestDTO) {
         Product product = productService.updateProduct(requestDTO);
         return responseFactory.success(product);

@@ -31,18 +31,4 @@ public class ProductCategory {
 
     @Column(name = "status")
     private Integer status = 1;
-
-    @Column(name = "create_user")
-    private String createUser;
-
-    @Column(name = "create_time", nullable = false, updatable = false)
-    @CreationTimestamp
-    private Date createTime;
-
-    @Column(name = "update_user")
-    private String updateUser;
-
-    @Column(name = "update_time")
-    @UpdateTimestamp
-    private Date updateTime;
 }
