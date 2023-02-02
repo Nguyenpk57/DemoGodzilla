@@ -8,6 +8,7 @@ import com.ntt.godzilla.service.ICategoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +23,7 @@ public class CategoryController extends BaseController {
     private final HttpServletRequest request;
     private final ResponseFactory responseFactory;
     private final ICategoryService categoryService;
+
     public CategoryController(HttpServletRequest request, ResponseFactory responseFactory, ICategoryService categoryService) {
         this.request = request;
         this.responseFactory = responseFactory;
@@ -33,9 +35,15 @@ public class CategoryController extends BaseController {
         return request;
     }
 
-    @PostMapping("/list")
-    public ResponseEntity<?> getAllCategories(@RequestBody CategoryRequestDTO requestDTO){
-        Page<Category> categories = categoryService.getCategoryByName(requestDTO, buildPageRequest(requestDTO));
+    @GetMapping("/list")
+    public ResponseEntity<?> getAllCategories(@RequestParam(required = false) String categoryName,
+                                              @RequestParam(required = false) Long id,
+                                              @RequestParam Integer page,
+                                              @RequestParam Integer size) {
+        CategoryRequestDTO categoryRequestDTO = new CategoryRequestDTO();
+        categoryRequestDTO.setCategoryName(categoryName);
+        categoryRequestDTO.setCategoryId(id);
+        Page<Category> categories = categoryService.getCategories(categoryRequestDTO, PageRequest.of(page,size));
         return responseFactory.success(RecordListResponse.builder()
                         .currentPage(categories.getNumber())
                         .pageSize(categories.getSize())
@@ -43,12 +51,14 @@ public class CategoryController extends BaseController {
                         .records(categories.stream().collect(Collectors.toList())).build()
                 , RecordListResponse.class);
     }
+
     @PostMapping("/")
-    public ResponseEntity<?> createCategory(@RequestBody CategoryRequestDTO requestDTO){
+    public ResponseEntity<?> createCategory(@RequestBody CategoryRequestDTO requestDTO) {
         return responseFactory.success(categoryService.createCategory(requestDTO));
     }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteCategory(@PathVariable Long id){
+    public ResponseEntity<?> deleteCategory(@PathVariable Long id) {
         return responseFactory.success(categoryService.deleteCategory(id));
     }
 }

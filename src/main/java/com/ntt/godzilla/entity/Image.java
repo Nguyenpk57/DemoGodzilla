@@ -7,27 +7,29 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Entity
+@Table(name = "image")
 public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long image_id ;
+    private Long imageId;
     @Column(name = "product_id")
-    private Long  product_id ;
-    @Column
-    private String image_type;
-    private Integer image_size;
-    private String image_name ;
-    private String image_path ;
+    private Long productId;
+    @Column(name = "image_type")
+    private String imageType;
+    @Column(name = "image_size")
+    private Long imageSize;
+    @Column(name = "image_name")
+    private String imageName;
+    @Column(name = "image_path")
+    private String imagePath;
 
     @Column(name = "create_user")
     private String createUser;
