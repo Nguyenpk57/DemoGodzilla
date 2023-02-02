@@ -43,7 +43,7 @@ public class CategoryController extends BaseController {
         CategoryRequestDTO categoryRequestDTO = new CategoryRequestDTO();
         categoryRequestDTO.setCategoryName(categoryName);
         categoryRequestDTO.setCategoryId(id);
-        Page<Category> categories = categoryService.getCategoryByName(categoryRequestDTO, PageRequest.of(page,size));
+        Page<Category> categories = categoryService.getCategories(categoryRequestDTO, PageRequest.of(page,size));
         return responseFactory.success(RecordListResponse.builder()
                         .currentPage(categories.getNumber())
                         .pageSize(categories.getSize())

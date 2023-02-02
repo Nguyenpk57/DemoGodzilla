@@ -30,7 +30,7 @@ public class CategoryServiceImpl implements ICategoryService {
     }
 
     @Override
-    public Page<Category> getCategoryByName(CategoryRequestDTO requestDTO, Pageable pageable) {
+    public Page<Category> getCategories(CategoryRequestDTO requestDTO, Pageable pageable) {
         if (!StringUtils.hasText(requestDTO.getCategoryName()) && requestDTO.getCategoryId() == null) {
             return categoryRepository.findCategoryByStatus(Constant.NEW_FLAG, pageable);
         }

@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 
 
 public interface ICategoryService {
-    Page<Category> getCategoryByName(CategoryRequestDTO requestDTO, Pageable pageable);
+    Page<Category> getCategories(CategoryRequestDTO requestDTO, Pageable pageable);
 
     Category createCategory(CategoryRequestDTO requestDTO);
     Boolean deleteCategory(Long id);
