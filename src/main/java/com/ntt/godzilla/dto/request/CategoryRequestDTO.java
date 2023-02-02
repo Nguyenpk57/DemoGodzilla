@@ -11,6 +11,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CategoryRequestDTO extends BaseRequestDTO {
+    @JsonProperty("categoryId")
+    private Long categoryId;
     @JsonProperty("categoryName")
     private String categoryName;
     @JsonProperty("description")

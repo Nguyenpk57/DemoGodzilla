@@ -1,13 +1,17 @@
 package com.ntt.godzilla.service;
 
+import com.ntt.godzilla.dto.response.FileResponseDTO;
+import com.ntt.godzilla.entity.Image;
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface IImageService {
-    public void save(MultipartFile file, String dir);
+    Boolean uploadImage(MultipartFile file, String categoryName);
 
-    public Resource loadFile(String filename);
+    Resource loadFile(String filename, String slugName);
 
-    public void deleteAll();
+    Image saveImage(MultipartFile imageFile, String uri, Long productId);
+    void deleteAll();
+    FileResponseDTO uploadAndSaveImage(String categoryName,MultipartFile imageFile,Long productId);
 
 }

@@ -1,15 +1,14 @@
 package com.ntt.godzilla.dto.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class FileResponseDTO {
+    private Long productId;
     private String fileName;
     private String fileDownloadUri;
     private String fileType;

@@ -15,7 +15,8 @@ public enum ResponseStatusEnum implements IResponseStatus {
     ERROR_ALREADY_IN_DATA(ResponseStatusCodeConstant.ERROR_ALREADY_IN_DATA, "already in the data"),
     ID_NOT_NULL(ResponseStatusCodeConstant.ID_NOT_NULL, "Id not null"),
     NO_DATA(ResponseStatusCodeConstant.NO_DATA, "NO_DATA"),
-    DATA_IN_USE_CANNOT_BE_DELETE_OR_UPDATE(ResponseStatusCodeConstant.DATA_IN_USE_CANNOT_BE_DELETE_OR_UPDATE, "Data in use cannot be delete or update");;
+    DATA_IN_USE_CANNOT_BE_DELETE_OR_UPDATE(ResponseStatusCodeConstant.DATA_IN_USE_CANNOT_BE_DELETE_OR_UPDATE, "Data in use cannot be delete or update"),
+    FILE_ALREADY_EXISTED(ResponseStatusCodeConstant.FILE_EXISTED, "File's already existed");
     private String code;
     private String message;
 

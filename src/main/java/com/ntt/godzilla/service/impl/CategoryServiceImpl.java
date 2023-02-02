@@ -11,7 +11,6 @@ import com.ntt.godzilla.util.Constant;
 import com.ntt.godzilla.util.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -19,8 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
-import java.io.File;
-import java.nio.file.Path;
 import java.util.Optional;
 
 @Service
@@ -34,10 +31,10 @@ public class CategoryServiceImpl implements ICategoryService {
 
     @Override
     public Page<Category> getCategoryByName(CategoryRequestDTO requestDTO, Pageable pageable) {
-        if (!StringUtils.hasText(requestDTO.getCategoryName())) {
+        if (!StringUtils.hasText(requestDTO.getCategoryName()) && requestDTO.getCategoryId() == null) {
             return categoryRepository.findCategoryByStatus(Constant.NEW_FLAG, pageable);
         }
-        return categoryRepository.findCategoryByStatusAndCategoryNameContaining(Constant.NEW_FLAG, requestDTO.getCategoryName(), pageable);
+        return categoryRepository.findCategoryByStatusAndCategoryNameContainingOrCategoryId(Constant.NEW_FLAG, requestDTO.getCategoryName(), requestDTO.getCategoryId(), pageable);
     }
 
     @Transactional

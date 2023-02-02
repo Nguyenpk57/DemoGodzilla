@@ -9,16 +9,8 @@ import java.nio.file.Path;
 
 public class FileUtils {
     private static final Logger logger = LoggerFactory.getLogger(FileUtils.class);
-
-    @Value("${spring.folder-upload-files:}")
-    private static Path rootLocation;
-
-    public static File generateFileDirName(String dirName){
-        return new File(rootLocation + "/" + dirName);
-    }
-
     public static void createFolder(String dirName) {
-        File fileDirname = generateFileDirName(dirName);
+        File fileDirname = new File("./upload" + "/" + dirName);
         if (fileDirname.exists()) {
             logger.info("Folder " + fileDirname + " is already existed!");
             return;
