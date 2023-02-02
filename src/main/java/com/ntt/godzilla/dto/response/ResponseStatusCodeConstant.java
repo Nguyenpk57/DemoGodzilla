@@ -12,4 +12,5 @@ public interface ResponseStatusCodeConstant {
     String ID_NOT_NULL = "E0007";
     String DATA_IN_USE_CANNOT_BE_DELETE_OR_UPDATE = "E0008";
     String NO_DATA = "E0009";
+    String FILE_EXISTED = "E0010";
 }
