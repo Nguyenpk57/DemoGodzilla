@@ -3,16 +3,20 @@ package com.ntt.godzilla.controller;
 import com.ntt.godzilla.dto.request.CategoryRequestDTO;
 import com.ntt.godzilla.dto.response.RecordListResponse;
 import com.ntt.godzilla.entity.Category;
+import com.ntt.godzilla.entity.Product;
 import com.ntt.godzilla.factory.ResponseFactory;
 import com.ntt.godzilla.service.ICategoryService;
+import com.ntt.godzilla.service.IProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
@@ -23,11 +27,13 @@ public class CategoryController extends BaseController {
     private final HttpServletRequest request;
     private final ResponseFactory responseFactory;
     private final ICategoryService categoryService;
+    private final IProductService productService;
 
-    public CategoryController(HttpServletRequest request, ResponseFactory responseFactory, ICategoryService categoryService) {
+    public CategoryController(HttpServletRequest request, ResponseFactory responseFactory, ICategoryService categoryService, IProductService productService) {
         this.request = request;
         this.responseFactory = responseFactory;
         this.categoryService = categoryService;
+        this.productService = productService;
     }
 
     @Override
@@ -35,7 +41,7 @@ public class CategoryController extends BaseController {
         return request;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/")
     public ResponseEntity<?> getAllCategories(@RequestParam(required = false) String categoryName,
                                               @RequestParam(required = false) Long id,
                                               @RequestParam Integer page,
@@ -50,6 +56,12 @@ public class CategoryController extends BaseController {
                         .total(categories.getTotalElements())
                         .records(categories.stream().collect(Collectors.toList())).build()
                 , RecordListResponse.class);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/{categoryId}/products")
+    public ResponseEntity<?> getProductsByCategoryId(@PathVariable Long categoryId) {
+        List<Product> products = productService.getProductsByCategoryId(categoryId);
+        return responseFactory.success(products);
     }
 
     @PostMapping("/")

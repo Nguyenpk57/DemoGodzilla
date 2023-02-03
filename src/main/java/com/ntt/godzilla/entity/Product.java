@@ -6,11 +6,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.boot.context.properties.bind.DefaultValue;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.util.*;
 
 
 @Entity
@@ -59,4 +57,23 @@ public class Product {
     @Column(name = "update_time")
     @UpdateTimestamp
     private Date updateTime;
+
+//    @OneToMany(
+//            mappedBy = "product",
+//            cascade = CascadeType.ALL,
+//            orphanRemoval = true
+//    )
+//    private List<Image> images = new ArrayList<>();
+//
+//    @ManyToMany(fetch = FetchType.LAZY,
+//            cascade = {
+//                    CascadeType.PERSIST,
+//                    CascadeType.MERGE
+//            })
+//    @JoinTable(name = "product_category",
+//            joinColumns = { @JoinColumn(name = "product_id") },
+//            inverseJoinColumns = { @JoinColumn(name = "category_id") })
+//
+//    private Set<Category> categories = new HashSet<>();
+
 }

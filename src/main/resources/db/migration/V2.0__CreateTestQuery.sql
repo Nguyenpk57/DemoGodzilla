@@ -37,11 +37,11 @@ CREATE TABLE product_category -- Associative table.
     category_id INT NOT NULL,
     status      INT(1) DEFAULT 1 COMMENT '1 is new, 9 is delete',
 
-    create_user VARCHAR(90),
-    create_time DATETIME,
-    update_user VARCHAR(90),
-    update_time DATETIME,
-    PRIMARY KEY (`product_id`, `category_id`)
+    PRIMARY KEY (`product_id`, `category_id`),
+    CONSTRAINT FK_FROM_product_category_TO_product  FOREIGN KEY (product_id)
+        REFERENCES product  (product_id),
+    CONSTRAINT FK_FROM_product_category_TO_category FOREIGN KEY (category_id)
+        REFERENCES category (category_id)
 );
 
 
@@ -58,7 +58,9 @@ create table image
     create_time DATETIME,
     update_user VARCHAR(90),
     update_time DATETIME,
-    PRIMARY KEY (`image_id`)
+    PRIMARY KEY (`image_id`),
+    CONSTRAINT FK_FROM_image_TO_product  FOREIGN KEY (product_id)
+        REFERENCES product  (product_id)
 );
 
 

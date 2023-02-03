@@ -1,5 +1,6 @@
 package com.ntt.godzilla.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,8 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -40,4 +43,14 @@ public class Category implements Serializable {
     @Column(name = "update_time")
     @UpdateTimestamp
     private Date updateTime;
+
+//    @ManyToMany(fetch = FetchType.LAZY,
+//            cascade = {
+//                    CascadeType.PERSIST,
+//                    CascadeType.MERGE
+//            },
+//            mappedBy = "categories")
+//    @JsonIgnore
+//    private Set<Product> products = new HashSet<>();
+
 }

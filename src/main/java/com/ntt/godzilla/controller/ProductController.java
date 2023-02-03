@@ -52,12 +52,6 @@ public class ProductController extends BaseController {
         return responseFactory.success(productService.getProductsById(productId));
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/category-id")
-    public ResponseEntity<?> getProductsByCategoryId(@RequestParam Long categoryId) {
-        List<Product> products = productService.getProductsByCategoryId(categoryId);
-        return responseFactory.success(products);
-    }
-
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> addProduct(@RequestBody ProductRequestDTO requestDTO) {
         Product product = productService.addProduct(requestDTO);
