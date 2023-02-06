@@ -5,11 +5,10 @@ import com.ntt.godzilla.dto.response.RecordListResponse;
 import com.ntt.godzilla.entity.Category;
 import com.ntt.godzilla.entity.Product;
 import com.ntt.godzilla.factory.ResponseFactory;
-import com.ntt.godzilla.service.ICategoryService;
-import com.ntt.godzilla.service.IProductService;
+import com.ntt.godzilla.service.CategoryService;
+import com.ntt.godzilla.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -26,10 +25,10 @@ public class CategoryController extends BaseController {
 
     private final HttpServletRequest request;
     private final ResponseFactory responseFactory;
-    private final ICategoryService categoryService;
-    private final IProductService productService;
+    private final CategoryService categoryService;
+    private final ProductService productService;
 
-    public CategoryController(HttpServletRequest request, ResponseFactory responseFactory, ICategoryService categoryService, IProductService productService) {
+    public CategoryController(HttpServletRequest request, ResponseFactory responseFactory, CategoryService categoryService, ProductService productService) {
         this.request = request;
         this.responseFactory = responseFactory;
         this.categoryService = categoryService;

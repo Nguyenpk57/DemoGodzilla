@@ -7,7 +7,7 @@ import com.ntt.godzilla.exception.ValidationException;
 import com.ntt.godzilla.factory.ResponseStatusEnum;
 import com.ntt.godzilla.repository.ProductCategoryRepository;
 import com.ntt.godzilla.repository.ProductRepository;
-import com.ntt.godzilla.service.IProductService;
+import com.ntt.godzilla.service.ProductService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class ProductServiceImpl implements IProductService {
+public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
 

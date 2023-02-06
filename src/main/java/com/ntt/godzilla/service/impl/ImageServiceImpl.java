@@ -6,7 +6,7 @@ import com.ntt.godzilla.entity.Image;
 import com.ntt.godzilla.exception.ValidationException;
 import com.ntt.godzilla.factory.ResponseStatusEnum;
 import com.ntt.godzilla.repository.ImageRepository;
-import com.ntt.godzilla.service.IImageService;
+import com.ntt.godzilla.service.ImageService;
 import com.ntt.godzilla.util.CommonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +25,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 @Service
-public class ImageServiceImpl implements IImageService {
+public class ImageServiceImpl implements ImageService {
     private static final Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
     @Value("${spring.folder-upload-files:}")
     private Path rootLocation;

@@ -3,7 +3,7 @@ package com.ntt.godzilla.controller;
 import com.ntt.godzilla.dto.response.FileResponseDTO;
 import com.ntt.godzilla.factory.ResponseFactory;
 import com.ntt.godzilla.factory.ResponseStatusEnum;
-import com.ntt.godzilla.service.IImageService;
+import com.ntt.godzilla.service.ImageService;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/images")
 public class ImageController extends BaseController {
     private final ResponseFactory responseFactory;
-    private final IImageService imageService;
-    public ImageController(ResponseFactory responseFactory, IImageService imageService) {
+    private final ImageService imageService;
+    public ImageController(ResponseFactory responseFactory, ImageService imageService) {
         this.responseFactory = responseFactory;
         this.imageService = imageService;
     }
