@@ -5,7 +5,7 @@ import com.ntt.godzilla.entity.Category;
 import com.ntt.godzilla.exception.ValidationException;
 import com.ntt.godzilla.factory.ResponseStatusEnum;
 import com.ntt.godzilla.repository.CategoryRepository;
-import com.ntt.godzilla.service.ICategoryService;
+import com.ntt.godzilla.service.CategoryService;
 import com.ntt.godzilla.util.CommonUtils;
 import com.ntt.godzilla.util.Constant;
 import com.ntt.godzilla.util.FileUtils;
@@ -21,7 +21,7 @@ import org.springframework.util.StringUtils;
 import java.util.Optional;
 
 @Service
-public class CategoryServiceImpl implements ICategoryService {
+public class CategoryServiceImpl implements CategoryService {
     private static final Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
     private final CategoryRepository categoryRepository;
 
@@ -58,7 +58,6 @@ public class CategoryServiceImpl implements ICategoryService {
     }
 
     /**
-     * @param id
      * @return boolean
      */
     @Transactional

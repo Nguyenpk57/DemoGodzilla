@@ -4,7 +4,7 @@ import com.ntt.godzilla.dto.request.ProductRequestDTO;
 import com.ntt.godzilla.dto.response.RecordListResponse;
 import com.ntt.godzilla.entity.Product;
 import com.ntt.godzilla.factory.ResponseFactory;
-import com.ntt.godzilla.service.IProductService;
+import com.ntt.godzilla.service.ProductService;
 import javax.annotation.security.RolesAllowed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
@@ -34,7 +33,7 @@ public class ProductController extends BaseController {
     private ResponseFactory responseFactory;
 
     @Autowired
-    private IProductService productService;
+    private ProductService productService;
 
     @RequestMapping(method = RequestMethod.GET)
     @RolesAllowed("admin")

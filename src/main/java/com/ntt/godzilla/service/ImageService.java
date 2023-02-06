@@ -5,7 +5,7 @@ import com.ntt.godzilla.entity.Image;
 import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
-public interface IImageService {
+public interface ImageService {
     Boolean uploadImage(MultipartFile file, String categoryName);
 
     Resource loadFile(String filename, String slugName);

@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 
 
 
-public interface ICategoryService {
+public interface CategoryService {
     Page<Category> getCategories(CategoryRequestDTO requestDTO, Pageable pageable);
 
     Category createCategory(CategoryRequestDTO requestDTO);
