@@ -2,7 +2,6 @@ package com.ntt.godzilla.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
@@ -38,11 +37,5 @@ public class ProductRequestDTO extends BaseRequestDTO {
 
     @JsonProperty("status")
     private Integer status;
-
-    @JsonProperty("createUser")
-    private String createUser;
-
-    @JsonProperty("updateUser")
-    private String updateUser;
 
 }

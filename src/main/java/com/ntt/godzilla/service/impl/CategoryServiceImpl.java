@@ -9,8 +9,6 @@ import com.ntt.godzilla.service.CategoryService;
 import com.ntt.godzilla.util.CommonUtils;
 import com.ntt.godzilla.util.Constant;
 import com.ntt.godzilla.util.FileUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -22,7 +20,6 @@ import java.util.Optional;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
-    private static final Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
     private final CategoryRepository categoryRepository;
 
     public CategoryServiceImpl(CategoryRepository categoryRepository) {

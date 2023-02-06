@@ -5,37 +5,26 @@ import com.ntt.godzilla.dto.response.RecordListResponse;
 import com.ntt.godzilla.entity.Product;
 import com.ntt.godzilla.factory.ResponseFactory;
 import com.ntt.godzilla.service.ProductService;
-import javax.annotation.security.RolesAllowed;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.annotation.security.RolesAllowed;
 import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/products")
 public class ProductController extends BaseController {
-    private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
+    private final ResponseFactory responseFactory;
 
-    @Autowired
-    private HttpServletRequest request;
+    private final ProductService productService;
 
-    @Override
-    public HttpServletRequest getRequest() {
-        return request;
+    public ProductController(ResponseFactory responseFactory, ProductService productService) {
+        this.responseFactory = responseFactory;
+        this.productService = productService;
     }
 
-    @Autowired
-    private ResponseFactory responseFactory;
-
-    @Autowired
-    private ProductService productService;
-
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping
     @RolesAllowed("admin")
     public ResponseEntity<?> getProductsByNameOrCategoryId(@RequestParam(required = false, defaultValue = "") String productName,
                                                            @RequestParam(required = false, defaultValue = "0") Integer page,
@@ -46,24 +35,24 @@ public class ProductController extends BaseController {
         return responseFactory.success(RecordListResponse.builder().currentPage(products.getNumber()).pageSize(products.getSize()).total(products.getTotalElements()).records(products.stream().collect(Collectors.toList())).build(), RecordListResponse.class);
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/{productId}")
+    @GetMapping("/{productId}")
     public ResponseEntity<?> getProductsById(@PathVariable Long productId) {
         return responseFactory.success(productService.getProductsById(productId));
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @PostMapping
     public ResponseEntity<?> addProduct(@RequestBody ProductRequestDTO requestDTO) {
         Product product = productService.addProduct(requestDTO);
         return responseFactory.success(product);
     }
 
-    @RequestMapping(method = RequestMethod.PUT)
+    @PutMapping
     public ResponseEntity<?> updateProduct(@RequestBody ProductRequestDTO requestDTO) {
         Product product = productService.updateProduct(requestDTO);
         return responseFactory.success(product);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, path = "/{productId}")
+    @DeleteMapping("/{productId}")
     public ResponseEntity<?> deleteProduct(@PathVariable Long productId) {
         productService.deleteProduct(productId);
         return responseFactory.success();
