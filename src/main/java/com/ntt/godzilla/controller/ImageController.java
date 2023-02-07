@@ -7,6 +7,7 @@ import com.ntt.godzilla.service.ImageService;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -48,5 +49,9 @@ public class ImageController extends BaseController {
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"").body(file);
     }
-
+    @GetMapping("/get-file/{categoryName}/{filename:.+}")
+    public ResponseEntity<byte[]> getImage(@PathVariable("filename") String filename, @PathVariable("categoryName") String categoryName) {
+       byte[] byteImage = imageService.getFile(filename,categoryName);
+        return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(byteImage);
+    }
 }
