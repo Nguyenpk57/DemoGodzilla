@@ -30,10 +30,10 @@ public class DatabaseSecondConfiguration extends BaseDatabaseConfig {
 
     @Bean(name = "secondSessionFactory")
     public LocalSessionFactoryBean secondSessionFactory() {
+        String[] packageToScan = new String[] {"com.ntt.godzilla.entity.entitySecond"};
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(secondDataSource());
-        sessionFactory.setPackagesToScan(
-                new String[]{"com.ntt.godzilla.entity.entitySecond"});
+        sessionFactory.setPackagesToScan(packageToScan);
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;

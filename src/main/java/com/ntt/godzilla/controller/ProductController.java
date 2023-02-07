@@ -26,7 +26,7 @@ public class ProductController extends BaseController {
 
     @GetMapping
     @RolesAllowed("admin")
-    public ResponseEntity<RecordListResponse> getProductsByNameOrCategoryId(@RequestParam(required = false, defaultValue = "") String productName,
+    public ResponseEntity<?> getProductsByNameOrCategoryId(@RequestParam(required = false, defaultValue = "") String productName,
                                                            @RequestParam(required = false, defaultValue = "0") Integer page,
                                                            @RequestParam(required = false, defaultValue = "10") Integer offset) {
 
@@ -36,18 +36,18 @@ public class ProductController extends BaseController {
     }
 
     @GetMapping("/{productId}")
-    public ResponseEntity<Product> getProductsById(@PathVariable Long productId) {
+    public ResponseEntity<?> getProductsById(@PathVariable Long productId) {
         return responseFactory.success(productService.getProductsById(productId));
     }
 
     @PostMapping
-    public ResponseEntity<Product> addProduct(@RequestBody ProductRequestDTO requestDTO) {
+    public ResponseEntity<?> addProduct(@RequestBody ProductRequestDTO requestDTO) {
         Product product = productService.addProduct(requestDTO);
         return responseFactory.success(product);
     }
 
     @PutMapping
-    public ResponseEntity<Product> updateProduct(@RequestBody ProductRequestDTO requestDTO) {
+    public ResponseEntity<?> updateProduct(@RequestBody ProductRequestDTO requestDTO) {
         Product product = productService.updateProduct(requestDTO);
         return responseFactory.success(product);
     }
