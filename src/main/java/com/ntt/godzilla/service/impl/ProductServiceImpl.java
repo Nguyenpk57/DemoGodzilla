@@ -52,13 +52,11 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getProductsByCategoryId(Long categoryId) {
-        List<Product> products = new ArrayList<>();
         List<ProductCategory> productCategories = productCategoryRepository.findAllByCategoryIdAndStatus(categoryId, ProductCategory.NEW);
         List<Long> productIds = productCategories.stream()
                 .map(ProductCategory::getProductId)
                 .collect(Collectors.toList());
-        products = productRepository.getProductsByProductIdIn(productIds);
-        return products;
+        return productRepository.getProductsByProductIdIn(productIds);
     }
 
     @Override
@@ -71,7 +69,6 @@ public class ProductServiceImpl implements ProductService {
         Long productId = product.getProductId();
 
         if (!Objects.isNull(requestDTO.getCategoryIds())) {
-            //TODO find category by id to check exist or not
             addProductCategory(requestDTO.getCategoryIds(), productId);
         }
         return product;
@@ -91,9 +88,9 @@ public class ProductServiceImpl implements ProductService {
         if (!Objects.isNull(requestDTO.getCategoryIds())) {
             //delete all old list product category by product id
             List<ProductCategory> productCategoriesDelete = productCategoryRepository.findAllByProductIdAndStatus(requestDTO.getProductId(), ProductCategory.NEW);
-            productCategoriesDelete.forEach(productCategory -> {
-                productCategory.setStatus(ProductCategory.DELETE);
-            });
+            productCategoriesDelete.forEach(productCategory ->
+                productCategory.setStatus(ProductCategory.DELETE)
+            );
             productCategoryRepository.saveAll(productCategoriesDelete);
 
             //insert new list product category when update
@@ -110,9 +107,9 @@ public class ProductServiceImpl implements ProductService {
         productRepository.save(product);
 
         List<ProductCategory> productCategories = productCategoryRepository.findAllByProductIdAndStatus(productId, ProductCategory.NEW);
-        productCategories.forEach(productCategory -> {
-            productCategory.setStatus(ProductCategory.DELETE);
-        });
+        productCategories.forEach(productCategory ->
+            productCategory.setStatus(ProductCategory.DELETE)
+        );
         productCategoryRepository.saveAll(productCategories);
     }
 
