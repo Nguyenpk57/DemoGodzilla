@@ -8,8 +8,7 @@ import com.ntt.godzilla.factory.ResponseStatusEnum;
 import com.ntt.godzilla.repository.ImageRepository;
 import com.ntt.godzilla.service.ImageService;
 import com.ntt.godzilla.util.CommonUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -19,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
@@ -26,7 +26,6 @@ import java.nio.file.Path;
 
 @Service
 public class ImageServiceImpl implements ImageService {
-    private static final Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
     @Value("${spring.folder-upload-files:}")
     private Path rootLocation;
     private final ImageRepository imageRepository;
@@ -86,7 +85,7 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public FileResponseDTO uploadAndSaveImage(String categoryName, MultipartFile imageFile, Long productId) {
         String sourceFolder = CommonUtils.toSlug(categoryName) + "/" + imageFile.getOriginalFilename();
-        String uri = MvcUriComponentsBuilder.fromMethodName(ImageController.class, "getFile",imageFile.getOriginalFilename(),CommonUtils.toSlug(categoryName)).build().toString();
+        String uri = MvcUriComponentsBuilder.fromMethodName(ImageController.class, "getImage",imageFile.getOriginalFilename(),CommonUtils.toSlug(categoryName)).build().toString();
         Boolean isUploadSuccess = uploadImage(imageFile, sourceFolder);
         if (isUploadSuccess) {
             Image image = saveImage(imageFile, sourceFolder, productId);
@@ -99,6 +98,18 @@ public class ImageServiceImpl implements ImageService {
                     .build();
         }
         throw new ValidationException(ResponseStatusEnum.GENERAL_ERROR);
+    }
+
+    @Override
+    public byte[] getFile(String filename, String slugName) {
+
+        byte[] image = new byte[0];
+        try {
+            image = FileUtils.readFileToByteArray(new File(generateFileDirName(slugName) + "/"+filename));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return image;
     }
 
     public File generateFileDirName(String slugName) {

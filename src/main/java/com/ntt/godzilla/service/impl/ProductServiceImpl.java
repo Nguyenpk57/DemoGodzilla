@@ -10,7 +10,6 @@ import com.ntt.godzilla.repository.ProductRepository;
 import com.ntt.godzilla.service.ProductService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -24,11 +23,14 @@ import java.util.stream.Collectors;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-    @Autowired
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
-    @Autowired
-    private ProductCategoryRepository productCategoryRepository;
+    private final ProductCategoryRepository productCategoryRepository;
+
+    public ProductServiceImpl(ProductRepository productRepository, ProductCategoryRepository productCategoryRepository) {
+        this.productRepository = productRepository;
+        this.productCategoryRepository = productCategoryRepository;
+    }
 
     @Override
     public Page<Product> getProductsByName(ProductRequestDTO requestDTO, Pageable pageable) {
@@ -50,57 +52,15 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getProductsByCategoryId(Long categoryId) {
-        List<Product> products = new ArrayList<>();
         List<ProductCategory> productCategories = productCategoryRepository.findAllByCategoryIdAndStatus(categoryId, ProductCategory.NEW);
         List<Long> productIds = productCategories.stream()
                 .map(ProductCategory::getProductId)
                 .collect(Collectors.toList());
-        products = productRepository.getProductsByProductIdIn(productIds);
-        return products;
+        return productRepository.getProductsByProductIdIn(productIds);
     }
 
-//    @Override
-//    public List<Product> getProductsByIdOrCategoryId(ProductRequestDTO requestDTO) {
-//        if (Objects.isNull(requestDTO.getCategoryId()) && Objects.isNull(requestDTO.getProductId())) {
-//            throw new ValidationException(ResponseStatusEnum.FIELD_MISSING);
-//        }
-//        List<Product> products = new ArrayList<>();
-//        if (Objects.isNull(requestDTO.getCategoryId())) {
-//            Optional<Product> productOptional = productRepository.findById(requestDTO.getProductId());
-//            if (productOptional.isPresent()) {
-//                products.add(productOptional.get());
-//                return products;
-//            } else {
-//                throw new ValidationException(ResponseStatusEnum.ERROR_NOT_FOUND);
-//            }
-//        }
-//
-//        if (Objects.isNull(requestDTO.getProductId())) {
-//            List<ProductCategory> productCategories = productCategoryRepository.findAllByCategoryId(requestDTO.getCategoryId());
-//            List<Long> productIds = productCategories.stream()
-//                    .map(ProductCategory::getProductId)
-//                    .collect(Collectors.toList());
-//            products = productRepository.getProductsByProductIdIn(productIds);
-//            return products;
-//        }
-//
-//        ProductCategory productCategory = productCategoryRepository
-//                .findProductCategoriesByProductIdAndCategoryId(requestDTO.getCategoryId(), requestDTO.getProductId());
-//
-//        if (Objects.isNull(productCategory)) {
-//            throw new ValidationException(ResponseStatusEnum.ERROR_NOT_FOUND);
-//        }
-//        Optional<Product> productOptional = productRepository.findById(requestDTO.getProductId());
-//        if (productOptional.isPresent()) {
-//            products.add(productOptional.get());
-//            return products;
-//        } else {
-//            throw new ValidationException(ResponseStatusEnum.ERROR_NOT_FOUND);
-//        }
-//    }
-
-    @Transactional
     @Override
+    @Transactional
     public Product addProduct(ProductRequestDTO requestDTO) {
         Product product = new Product();
         BeanUtils.copyProperties(requestDTO, product);
@@ -109,13 +69,13 @@ public class ProductServiceImpl implements ProductService {
         Long productId = product.getProductId();
 
         if (!Objects.isNull(requestDTO.getCategoryIds())) {
-            //TODO find category by id to check exist or not
-            addProductCategory(requestDTO.getCategoryIds(), productId, product.getCreateUser());
+            addProductCategory(requestDTO.getCategoryIds(), productId);
         }
         return product;
     }
 
     @Override
+    @Transactional
     public Product updateProduct(ProductRequestDTO requestDTO) {
         if (Objects.isNull(requestDTO.getProductId())) {
             throw new ValidationException(ResponseStatusEnum.FIELD_MISSING);
@@ -128,31 +88,32 @@ public class ProductServiceImpl implements ProductService {
         if (!Objects.isNull(requestDTO.getCategoryIds())) {
             //delete all old list product category by product id
             List<ProductCategory> productCategoriesDelete = productCategoryRepository.findAllByProductIdAndStatus(requestDTO.getProductId(), ProductCategory.NEW);
-            productCategoriesDelete.forEach(productCategory -> {
-                productCategory.setStatus(ProductCategory.DELETE);
-            });
+            productCategoriesDelete.forEach(productCategory ->
+                productCategory.setStatus(ProductCategory.DELETE)
+            );
             productCategoryRepository.saveAll(productCategoriesDelete);
 
             //insert new list product category when update
-            addProductCategory(requestDTO.getCategoryIds(), requestDTO.getProductId(), product.getCreateUser());
+            addProductCategory(requestDTO.getCategoryIds(), requestDTO.getProductId());
         }
         return product;
     }
 
     @Override
+    @Transactional
     public void deleteProduct(Long productId) {
-        Product product = getProductsById(productId );
+        Product product = getProductsById(productId);
         product.setStatus(Product.DELETE);
         productRepository.save(product);
 
         List<ProductCategory> productCategories = productCategoryRepository.findAllByProductIdAndStatus(productId, ProductCategory.NEW);
-        productCategories.forEach(productCategory -> {
-            productCategory.setStatus(ProductCategory.DELETE);
-        });
+        productCategories.forEach(productCategory ->
+            productCategory.setStatus(ProductCategory.DELETE)
+        );
         productCategoryRepository.saveAll(productCategories);
     }
 
-    private void addProductCategory(List<Long> categoryIds, Long productId, String createUser) {
+    private void addProductCategory(List<Long> categoryIds, Long productId) {
         List<ProductCategory> productCategoriesNew = new ArrayList<>();
         categoryIds.forEach(id -> {
             ProductCategory productCategory = ProductCategory.builder()

@@ -14,4 +14,5 @@ public interface ImageService {
     void deleteAll();
     FileResponseDTO uploadAndSaveImage(String categoryName,MultipartFile imageFile,Long productId);
 
+    byte[] getFile(String filename, String slugName);
 }

@@ -5,8 +5,6 @@ import com.ntt.godzilla.util.PaginationUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 
-import javax.servlet.http.HttpServletRequest;
-
 public abstract class BaseController {
 
     @Value("${table.record_per_page:10}")
@@ -18,11 +16,4 @@ public abstract class BaseController {
         }
         return PaginationUtils.generatePageRequest(baseRequestDTO.getPage(), baseRequestDTO.getOffset() == 0 ? recordPerPage : baseRequestDTO.getOffset());
     }
-
-    public String getIpAddress() {
-        HttpServletRequest req = getRequest();
-        return req.getRemoteAddr();
-    }
-
-    public abstract HttpServletRequest getRequest();
 }
